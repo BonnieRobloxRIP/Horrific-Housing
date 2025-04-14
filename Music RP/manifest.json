@@ -1,0 +1,52 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"BonnieRobloxRIP"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.45"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"header": {
+		"name": "Horrific Housing Music Extras",
+		"description": "Music to my ears. have this or die idk ",
+		"min_engine_version": [
+			1,
+			21,
+			60
+		],
+		"uuid": "d2f89ec6-d8c6-4121-a431-1ef99974f6c5",
+		"version": [
+			1,
+			0,
+			0
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "63b57bd8-f2ee-45f0-85a4-6f207706b7aa",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "7d078c95-4370-4bec-9359-9b07cf194e04",
+			"version": [
+				1,
+				1,
+				16
+			]
+		}
+	]
+}
