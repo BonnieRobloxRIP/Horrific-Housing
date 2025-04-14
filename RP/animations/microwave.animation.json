@@ -1,0 +1,23 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.microwave.spin": {
+			"loop": true,
+			"animation_length": 2,
+			"bones": {
+				"base": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"2.0": [0, -360, 0]
+					}
+				},
+				"spoon": {
+					"rotation": {
+						"0.0": [0, 0, 0],
+						"2.0": [0, -720, 0]
+					}
+				}
+			}
+		}
+	}
+}
