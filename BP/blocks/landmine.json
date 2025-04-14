@@ -1,0 +1,45 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:block": {
+		"description": {
+			"identifier": "brr:landmine",
+			"menu_category": {
+				"category": "equipment",
+				"is_hidden_in_commands": false
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.landmine",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "brr_landmine",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					2,
+					8
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-4,
+					0,
+					-4
+				],
+				"size": [
+					8,
+					2,
+					8
+				]
+			}
+		}
+	}
+}
