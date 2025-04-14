@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "brr:ornament_alastor_plush",
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.plush"
+			}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "brr_ornament_alastor_plush"
+			},
+			"minecraft:food": {},
+			"minecraft:use_modifiers": {
+				"use_duration": 999999
+			},
+			"minecraft:use_duration": 999999
+		}
+	}
+}
