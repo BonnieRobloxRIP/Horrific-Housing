@@ -1,0 +1,46 @@
+{
+	"format_version": "1.19.60",
+	"minecraft:block": {
+		"description": {
+			"identifier": "brr:pedistal",
+			"menu_category": {
+				"category": "equipment",
+				"is_hidden_in_commands": false
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.pedistal",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "brr_pedistal",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:light_emission": 12,
+			"minecraft:collision_box": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					16,
+					10
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					16,
+					10
+				]
+			}
+		}
+	}
+}
