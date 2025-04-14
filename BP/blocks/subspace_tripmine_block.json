@@ -1,0 +1,46 @@
+{
+	"format_version": "1.21.20",
+	"minecraft:block": {
+		"description": {
+			"identifier": "brr:subspace_tripmine_block",
+			"menu_category": {
+				"category": "equipment",
+				"is_hidden_in_commands": false
+			}
+		},
+		"components": {
+			"minecraft:geometry": "geometry.subspace_tripmine_block",
+			"minecraft:material_instances": {
+				"*": {
+					"texture": "brr_subspace_tripmine_block",
+					"render_method": "alpha_test"
+				}
+			},
+			"minecraft:collision_box": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					10,
+					10
+				]
+			},
+			"minecraft:selection_box": {
+				"origin": [
+					-5,
+					0,
+					-5
+				],
+				"size": [
+					10,
+					10,
+					10
+				]
+			},
+			"minecraft:light_emission": 5
+		}
+	}
+}

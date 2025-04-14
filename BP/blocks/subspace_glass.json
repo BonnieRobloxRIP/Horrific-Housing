@@ -1,0 +1,71 @@
+{
+	"format_version": "1.20.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "brr:subspace_glass",
+			"menu_category": {
+				"category": "construction"
+			},
+			"properties": {
+				"pos:x": [
+					0,
+					1
+				],
+				"pos:nx": [
+					0,
+					1
+				],
+				"pos:z": [
+					0,
+					1
+				],
+				"pos:nz": [
+					0,
+					1
+				]
+			}
+		},
+		"components": {
+			"minecraft:material_instances": {
+				"*": {
+					"render_method": "blend",
+					"texture": "brr_subspace_glass_full"
+				}
+			},
+			"minecraft:destructible_by_mining": {
+				"seconds_to_destroy": 0.1
+			},
+			"minecraft:destructible_by_explosion": true
+		},
+		"permutations": [
+			{
+				"condition": "q.block_state('pos:x') == 1 && q.block_state('pos:nx') == 1 && q.block_state('pos:y') == 1 && q.block_state('pos:ny') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "blend",
+							"texture": "brr_subspace_glass_full"
+						},
+						"up": {
+							"texture": "brr_subspace_glass"
+						}
+					}
+				}
+			},
+			{
+				"condition": "q.block_state('pos:x') == 0 && q.block_state('pos:nx') == 1 && q.block_state('pos:y') == 1 && q.block_state('pos:ny') == 1",
+				"components": {
+					"minecraft:material_instances": {
+						"*": {
+							"render_method": "blend",
+							"texture": "brr_subspace_glass_full"
+						},
+						"south": {
+							"texture": "brr_subspace_glass_three01"
+						}
+					}
+				}
+			}
+		]
+	}
+}

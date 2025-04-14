@@ -1,0 +1,18 @@
+{
+	"format_version": "1.20.0",
+	"minecraft:block": {
+		"description": {
+			"identifier": "brr:subspace_superstructure_vines",
+			"menu_category": {
+				"category": "construction",
+				"is_hidden_in_commands": false
+			}
+		},
+		"components": {
+			"minecraft:map_color": "#000000",
+			"minecraft:destructible_by_explosion": false,
+			"minecraft:destructible_by_mining": false,
+			"minecraft:flammable": false
+		}
+	}
+}
