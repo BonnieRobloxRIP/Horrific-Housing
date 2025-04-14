@@ -1,0 +1,286 @@
+{
+	"format_version": "1.8.0",
+	"animations": {
+		"animation.subspace_tripmine_entity.explode": {
+			"loop": "hold_on_last_frame",
+			"animation_length": 22.375,
+			"bones": {
+				"body": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.25": {
+							"post": [
+								0,
+								-90,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"3.25": {
+							"post": [
+								0,
+								-267.5,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"7.0": {
+							"post": [
+								-270,
+								-720,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"14.0": [
+							-2252.50954,
+							-715.00477,
+							1619.78135
+						]
+					},
+					"position": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.25": {
+							"post": [
+								0,
+								1,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"3.25": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"7.0": {
+							"post": [
+								0,
+								30,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"10.0": {
+							"post": [
+								0,
+								150,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"14.0": [
+							0,
+							150,
+							0
+						]
+					},
+					"scale": {
+						"0.0": [
+							1,
+							1,
+							1
+						],
+						"11.0": {
+							"pre": [
+								1,
+								1,
+								1
+							],
+							"post": [
+								1,
+								1,
+								1
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"11.5417": {
+							"post": [
+								1.5,
+								1.5,
+								1.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"12.0": {
+							"post": [
+								1,
+								1,
+								1
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"13.75": {
+							"post": [
+								2,
+								2,
+								2
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"13.9167": {
+							"post": [
+								0.5,
+								0.5,
+								0.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"14.0": {
+							"post": [
+								2,
+								2,
+								2
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"14.0833": [
+							0,
+							0,
+							0
+						]
+					}
+				},
+				"core": {
+					"rotation": {
+						"0.0": {
+							"post": [
+								0,
+								0,
+								0
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"1.0": {
+							"post": [
+								-84.54193,
+								-5.72477,
+								64.56301
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"5.0": {
+							"post": [
+								-435.81924,
+								42.31217,
+								1443.71104
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"11.0": {
+							"post": [
+								-2759.02621,
+								17.88461,
+								2517.46542
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"14.0": [
+							0,
+							0,
+							0
+						]
+					},
+					"position": [
+						0,
+						0,
+						0
+					],
+					"scale": {
+						"13.375": {
+							"pre": [
+								1,
+								1,
+								1
+							],
+							"post": [
+								1,
+								1,
+								1
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"13.75": {
+							"post": [
+								3,
+								3,
+								3
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"13.875": {
+							"post": [
+								0.5,
+								0.5,
+								0.5
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"14.0": {
+							"post": [
+								25,
+								25,
+								25
+							],
+							"lerp_mode": "catmullrom"
+						},
+						"14.0833": [
+							0,
+							0,
+							0
+						]
+					}
+				}
+			},
+			"sound_effects": {
+				"0.0": {
+					"effect": "alarm15"
+				},
+				"1.25": {
+					"effect": "arming"
+				},
+				"4.0833": {
+					"effect": "powercharge"
+				},
+				"13.75": {
+					"effect": "subspace05"
+				}
+			},
+			"particle_effects": {
+				"0.0": {
+					"effect": "alert"
+				},
+				"9.0": {
+					"effect": "subspace02"
+				},
+				"10.0": {
+					"effect": "subspace01"
+				},
+				"14.0": {
+					"effect": "subspace04"
+				},
+				"14.5": {
+					"effect": "subspace03"
+				}
+			},
+			"timeline": {}
+		}
+	}
+}
