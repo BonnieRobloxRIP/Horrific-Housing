@@ -1,0 +1,167 @@
+{
+	"format_version": [
+		1,
+		1,
+		0
+	],
+	"brr:pedistal": {
+		"sound": "stone"
+	},
+	"brr:subspace_tripmine_block": {
+		"sound": "stone"
+	},
+	"brr:landmine": {
+		"sound": "stone"
+	},
+	"brr:bonnie_plush": {
+		"sound": "cloth"
+	},
+	"brr:springtrap_plush": {
+		"sound": "cloth"
+	},
+	"brr:alastor_plush": {
+		"sound": "cloth"
+	},
+	"brr:seal_plush": {
+		"sound": "cloth"
+	},
+	"brr:cone": {
+		"sound": "stone"
+	},
+	"brr:sans_plushie": {
+		"sound": "stone"
+	},
+	"brr:purple_guy_plushie": {
+		"sound": "stone"
+	},
+	"brr:tabi_plushie": {
+		"sound": "stone"
+	},
+	"brr:spawn": {
+		"sound": "stone",
+		"textures": "brr_spawn"
+	},
+	"brr:melodie_plush": {
+		"sound": "stone"
+	},
+	"brr:janet_plush": {
+		"sound": "stone"
+	},
+	"brr:velvette_plush": {
+		"sound": "stone"
+	},
+	"brr:fan": {
+		"sound": "stone"
+	},
+	"brr:rgb_block": {
+		"sound": "stone",
+		"textures": "brr_rgb_block"
+	},
+	"brr:taco_block": {
+		"sound": "stone"
+	},
+	"brr:his_hand": {
+		"sound": "stone"
+	},
+	"brr:invisible": {
+		"sound": "stone",
+		"textures": "brr_invisible"
+	},
+	"brr:subspace_magma": {
+		"sound": "stone",
+		"textures": "brr_subspace_magma"
+	},
+	"brr:engineer_plush": {
+		"sound": "stone"
+	},
+	"brr:marshmallow997_plush": {
+		"sound": "stone"
+	},
+	"brr:cookiescript_plush": {
+		"sound": "stone"
+	},
+	"brr:doggo_plush": {
+		"sound": "stone"
+	},
+	"brr:subspace_grass": {
+		"sound": "grass",
+		"textures": "brr_subspace_grass"
+	},
+	"brr:subspace_rock": {
+		"sound": "stone",
+		"textures": "brr_subspace_rock"
+	},
+	"brr:subspace_plant01": {
+		"sound": "grass",
+		"textures": "brr_subspace_plant01"
+	},
+	"brr:subspace_plant02": {
+		"sound": "grass",
+		"textures": "brr_subspace_plant02"
+	},
+	"brr:subspace_plant03": {
+		"sound": "grass",
+		"textures": "brr_subspace_plant03"
+	},
+	"brr:subspace_plant04": {
+		"sound": "grass",
+		"textures": "brr_subspace_plant04"
+	},
+	"brr:subspace_plant05": {
+		"sound": "grass",
+		"textures": "brr_subspace_plant05"
+	},
+	"brr:subspace_plant06": {
+		"sound": "grass",
+		"textures": "brr_subspace_plant06"
+	},
+	"brr:subspace_plant07": {
+		"sound": "grass",
+		"textures": "brr_subspace_plant07"
+	},
+	"brr:subspace_plant08": {
+		"sound": "grass",
+		"textures": "brr_subspace_plant08"
+	},
+	"brr:subspace_superstructure": {
+		"sound": "stone",
+		"textures": "brr_subspace_superstructure"
+	},
+	"brr:subspace_superstructure_wires": {
+		"sound": "stone",
+		"textures": "brr_subspace_superstructure_wires"
+	},
+	"brr:subspace_superstructure_vines": {
+		"sound": "stone",
+		"textures": "brr_subspace_superstructure_vines"
+	},
+	"brr:subspace_glass": {
+		"sound": "grass",
+		"textures": "brr_subspace_glass"
+	},
+	"brr:crystal_plush": {
+		"sound": "stone"
+	},
+	"brr:colette_plush": {
+		"sound": "stone"
+	},
+	"brr:dawn_and_sunrise": {
+		"sound": "stone"
+	},
+	"brr:accelerator_plush": {
+		"sound": "stone"
+	},
+	"brr:subspace_clear_rock": {
+		"sound": "stone",
+		"textures": "brr_subspace_clear_rock"
+	},
+	"brr:vasko_plush": {
+		"sound": "stone"
+	},
+	"brr:boyfriend_plush": {
+		"sound": "stone"
+	},
+	"brr:heart_block": {
+		"sound": "stone"
+	}
+}

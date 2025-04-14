@@ -1,0 +1,60 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"BonnieRobloxRIP"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.45"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"header": {
+		"name": "Horrific Housing Extras",
+		"description": "Created By BonnieRobloxRIP for the map: Horrific Housing",
+		"min_engine_version": [
+			1,
+			21,
+			70
+		],
+		"uuid": "7d078c95-4370-4bec-9359-9b07cf194e04",
+		"version": [
+			1,
+			1,
+			16
+		]
+	},
+	"modules": [
+		{
+			"type": "resources",
+			"uuid": "2f609f57-1445-4adb-b392-3b8021afcc55",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "0b5577d3-2865-4ec3-9369-dc50a79eb21f",
+			"version": [
+				1,
+				1,
+				16
+			]
+		},
+		{
+			"uuid": "d2f89ec6-d8c6-4121-a431-1ef99974f6c5",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	]
+}
