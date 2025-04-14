@@ -1,0 +1,29 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "brr:subspaced_bonnierobloxrip",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/subspace_bonnie"
+			},
+			"geometry": {
+				"default": "geometry.subspaced_bonnierobloxrip"
+			},
+			"render_controllers": [
+				"controller.render.subspaced_bonnierobloxrip"
+			],
+			"spawn_egg": {
+				"texture": "brr_subspaced_bonnierobloxrip_egg",
+				"texture_index": 0
+			},
+			"animations": {
+				"teaser": "animation.teaser",
+				"idle": "animation.idle",
+				"subspace": "animation.subspace"
+			}
+		}
+	}
+}

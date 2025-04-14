@@ -1,0 +1,40 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "brr:subspace_tripmine_entity",
+			"materials": {
+				"default": "entity_alphatest"
+			},
+			"textures": {
+				"default": "textures/entity/subspace_tripmine_block"
+			},
+			"geometry": {
+				"default": "geometry.subspace_tripmine_entity"
+			},
+			"render_controllers": [
+				"controller.render.subspace_tripmine_entity"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#52006F"
+			},
+			"animations": {
+				"explode": "animation.subspace_tripmine_entity.explode"
+			},
+			"particle_effects": {
+				"alert": "brr:alert",
+				"subspace01": "brr:subspace01",
+				"subspace02": "brr:subspace02",
+				"subspace03": "brr:subspace03",
+				"subspace04": "brr:subspace04"
+			},
+			"sound_effects": {
+				"alarm15": "particle.alarm15",
+				"arming": "particle.arming",
+				"subspace05": "particle.subspace05",
+				"powercharge": "particle.powercharge"
+			}
+		}
+	}
+}
