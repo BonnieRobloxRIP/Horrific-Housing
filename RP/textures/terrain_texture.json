@@ -1,0 +1,188 @@
+{
+	"num_mip_levels": 4,
+	"padding": 8,
+	"resource_pack_name": "Horrific Housing Extras",
+	"texture_name": "atlas.terrain",
+	"texture_data": {
+		"brr_pedistal": {
+			"textures": "textures/blocks/pedistal"
+		},
+		"brr_subspace_tripmine_block": {
+			"textures": "textures/blocks/subspace_tripmine_block"
+		},
+		"brr_landmine": {
+			"textures": "textures/blocks/landmine"
+		},
+		"brr_bonnie_plush": {
+			"textures": "textures/blocks/bonnie_plush"
+		},
+		"brr_springtrap_plush": {
+			"textures": "textures/blocks/springtrap_plush"
+		},
+		"brr_alastor_plush": {
+			"textures": "textures/blocks/alastor_plush"
+		},
+		"brr_seal_plush": {
+			"textures": "textures/blocks/seal_plush"
+		},
+		"brr_cone": {
+			"textures": "textures/blocks/cone"
+		},
+		"brr_sans_plushie": {
+			"textures": "textures/blocks/sans_plush"
+		},
+		"brr_purple_guy_plushie": {
+			"textures": "textures/blocks/william_plush"
+		},
+		"brr_tabi_plushie": {
+			"textures": "textures/blocks/tabi_plush"
+		},
+		"brr_spawn": {
+			"textures": "textures/blocks/spawn"
+		},
+		"brr_melodie_plush": {
+			"textures": "textures/blocks/melodie_plush"
+		},
+		"brr_janet_plush": {
+			"textures": "textures/blocks/janet_plush"
+		},
+		"brr_velvette_plush": {
+			"textures": "textures/blocks/velvette_plush"
+		},
+		"brr_fan": {
+			"textures": "textures/blocks/fan"
+		},
+		"brr_rgb_block": {
+			"textures": "textures/blocks/rgb"
+		},
+		"brr_taco_block": {
+			"textures": "textures/blocks/taco_block"
+		},
+		"brr_his_hand": {
+			"textures": "textures/blocks/his_hand"
+		},
+		"brr_invisible": {
+			"textures": "textures/blocks/invisible_block"
+		},
+		"brr_subspace_magma": {
+			"textures": "textures/blocks/subspace_magma"
+		},
+		"brr_engineer_plush": {
+			"textures": "textures/blocks/engineer_plush"
+		},
+		"brr_marshmallow997_plush": {
+			"textures": "textures/blocks/marshmallow997_plush"
+		},
+		"brr_cookiescript_plush": {
+			"textures": "textures/blocks/cookiescript_plush"
+		},
+		"brr_doggo_plush": {
+			"textures": "textures/blocks/doggo_plush"
+		},
+		"brr_subspace_grass": {
+			"textures": "textures/blocks/subspace_grass"
+		},
+		"brr_subspace_rock": {
+			"textures": "textures/blocks/subspace_rock"
+		},
+		"brr_subspace_plant01": {
+			"textures": "textures/blocks/subspace_plant01"
+		},
+		"brr_subspace_plant02": {
+			"textures": "textures/blocks/subspace_plant02"
+		},
+		"brr_subspace_plant03": {
+			"textures": "textures/blocks/subspace_plant03"
+		},
+		"brr_subspace_plant04": {
+			"textures": "textures/blocks/subspace_plant04"
+		},
+		"brr_subspace_plant05": {
+			"textures": "textures/blocks/subspace_plant05"
+		},
+		"brr_subspace_plant06": {
+			"textures": "textures/blocks/subspace_plant06"
+		},
+		"brr_subspace_plant07": {
+			"textures": "textures/blocks/subspace_plant07"
+		},
+		"brr_subspace_plant08": {
+			"textures": "textures/blocks/subspace_plant08"
+		},
+		"brr_subspace_superstructure": {
+			"textures": "textures/blocks/subspace_metal_superstructure"
+		},
+		"brr_subspace_superstructure_wires": {
+			"textures": "textures/blocks/subspace_metal_superstructure_wires"
+		},
+		"brr_subspace_superstructure_vines": {
+			"textures": "textures/blocks/subspace_metal_superstructure_vines"
+		},
+		"brr_subspace_glass": {
+			"textures": "textures/blocks/subspace_glass"
+		},
+		"brr_subspace_glass_side01": {
+			"textures": "textures/blocks/subspace_glass_side01"
+		},
+		"brr_subspace_glass_side02": {
+			"textures": "textures/blocks/subspace_glass_side02"
+		},
+		"brr_subspace_glass_side03": {
+			"textures": "textures/blocks/subspace_glass_side03"
+		},
+		"brr_subspace_glass_side04": {
+			"textures": "textures/blocks/subspace_glass_side04"
+		},
+		"brr_subspace_glass_corner01": {
+			"textures": "textures/blocks/subspace_glass_corner01"
+		},
+		"brr_subspace_glass_corner02": {
+			"textures": "textures/blocks/subspace_glass_corner02"
+		},
+		"brr_subspace_glass_corner03": {
+			"textures": "textures/blocks/subspace_glass_corner03"
+		},
+		"brr_subspace_glass_corner04": {
+			"textures": "textures/blocks/subspace_glass_corner04"
+		},
+		"brr_subspace_glass_three01": {
+			"textures": "textures/blocks/subspace_glass_three01"
+		},
+		"brr_subspace_glass_three02": {
+			"textures": "textures/blocks/subspace_glass_three02"
+		},
+		"brr_subspace_glass_three03": {
+			"textures": "textures/blocks/subspace_glass_three03"
+		},
+		"brr_subspace_glass_three04": {
+			"textures": "textures/blocks/subspace_glass_three04"
+		},
+		"brr_subspace_glass_full": {
+			"textures": "textures/blocks/subspace_glass_full"
+		},
+		"brr_crystal_plush": {
+			"textures": "textures/blocks/crystal_plush"
+		},
+		"brr_colette_plush": {
+			"textures": "textures/blocks/colette_plush"
+		},
+		"brr_dawn_and_sunrise": {
+			"textures": "textures/blocks/sunrise_and_dawn"
+		},
+		"brr_accelerator_plush": {
+			"textures": "textures/blocks/accelerator_plush"
+		},
+		"brr_subspace_clear_rock": {
+			"textures": "textures/blocks/subspace_rock01"
+		},
+		"brr_vasko_plush": {
+			"textures": "textures/blocks/vasko_plush"
+		},
+		"brr_boyfriend_plush": {
+			"textures": "textures/blocks/boyfriend"
+		},
+		"brr_heart_block": {
+			"textures": "textures/blocks/heart"
+		}
+	}
+}

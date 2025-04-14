@@ -1,0 +1,282 @@
+{
+	"resource_pack_name": "Horrific Housing Extras",
+	"texture_name": "atlas.items",
+	"texture_data": {
+		"brr_heart": {
+			"textures": "textures/items/heart"
+		},
+		"brr_vheart": {
+			"textures": "textures/items/Vasko_Heart"
+		},
+		"brr:ok_hand": {
+			"textures": "textures/items/ok hand"
+		},
+		"brr_plate_egg": {
+			"textures": "textures/items/house_pfp"
+		},
+		"brr_taco": {
+			"textures": "textures/items/taco"
+		},
+		"brr_banana": {
+			"textures": "textures/items/banana"
+		},
+		"brr_game_start": {
+			"textures": "textures/items/game_start"
+		},
+		"brr_game_stop": {
+			"textures": "textures/items/game_stop"
+		},
+		"brr_spectate": {
+			"textures": "textures/items/spectate"
+		},
+		"brr_store": {
+			"textures": "textures/items/store"
+		},
+		"brr_host_panel": {
+			"textures": "textures/items/host_panel"
+		},
+		"brr_hello": {
+			"textures": "textures/items/hello"
+		},
+		"brr_burger": {
+			"textures": "textures/items/hamburger"
+		},
+		"brr_antidote": {
+			"textures": "textures/items/antidote"
+		},
+		"brr_soda": {
+			"textures": "textures/items/soda"
+		},
+		"brr_red_soda": {
+			"textures": "textures/items/red_soda"
+		},
+		"brr_subspace_soda": {
+			"textures": "textures/items/subspace_soda"
+		},
+		"brr_death_note": {
+			"textures": "textures/items/deathnote"
+		},
+		"brr_vote_classic": {
+			"textures": "textures/items/vote_classic"
+		},
+		"brr_vote_blast": {
+			"textures": "textures/items/vote_blast"
+		},
+		"brr_vote_rapid": {
+			"textures": "textures/items/vote_rapid"
+		},
+		"brr_vote_stud": {
+			"textures": "textures/items/vote_stud"
+		},
+		"brr_vote_oneplate": {
+			"textures": "textures/items/vote_oneplate"
+		},
+		"brr_vote_scattered": {
+			"textures": "textures/items/vote_scattered"
+		},
+		"brr_vote_lava": {
+			"textures": "textures/items/vote_lava"
+		},
+		"brr_vote_spleef": {
+			"textures": "textures/items/vote_spleef"
+		},
+		"brr_vote_line": {
+			"textures": "textures/items/vote_line"
+		},
+		"brr_vote_town": {
+			"textures": "textures/items/vote_town"
+		},
+		"brr_vote_ring": {
+			"textures": "textures/items/vote_ring"
+		},
+		"brr_vote_sweeper": {
+			"textures": "textures/items/vote_sweeper"
+		},
+		"brr_vote_twoplates": {
+			"textures": "textures/items/vote_twoplates"
+		},
+		"brr_vote_murdertown": {
+			"textures": "textures/items/vote_murdertown"
+		},
+		"brr_vote_hotel": {
+			"textures": "textures/items/vote_hotel"
+		},
+		"brr_vote_islands": {
+			"textures": "textures/items/vote_islands"
+		},
+		"brr_vote_gear": {
+			"textures": "textures/items/vote_gear"
+		},
+		"brr_vote_slowed_down": {
+			"textures": "textures/items/vote_slowed_down"
+		},
+		"brr_vote_stack": {
+			"textures": "textures/items/vote_stack"
+		},
+		"brr_vote_heist": {
+			"textures": "textures/items/vote_heist"
+		},
+		"brr_subspaced_bonnierobloxrip_egg": {
+			"textures": "textures/items/vote_boss"
+		},
+		"brr_store_colors": {
+			"textures": "textures/ui/store_colors"
+		},
+		"brr_store_ornaments": {
+			"textures": "textures/ui/store_ornaments"
+		},
+		"brr_store_particles": {
+			"textures": "textures/ui/store_effects"
+		},
+		"brr_store_perks": {
+			"textures": "textures/ui/store_perks"
+		},
+		"brr_store_tags": {
+			"textures": "textures/items/store_tags"
+		},
+		"brr_home_page": {
+			"textures": "textures/ui/home_page"
+		},
+		"brr_inventory": {
+			"textures": "textures/items/inventory"
+		},
+		"brr_color_red": {
+			"textures": "textures/items/color_red"
+		},
+		"brr_color_blue": {
+			"textures": "textures/items/color_blue"
+		},
+		"brr_color_pink": {
+			"textures": "textures/items/color_pink"
+		},
+		"brr_color_green": {
+			"textures": "textures/items/color_green"
+		},
+		"brr_color_yellow": {
+			"textures": "textures/items/color_yellow"
+		},
+		"brr_color_orange": {
+			"textures": "textures/items/color_orange"
+		},
+		"brr_color_purple": {
+			"textures": "textures/items/color_purple"
+		},
+		"brr_color_white": {
+			"textures": "textures/items/color_white"
+		},
+		"brr_color_black": {
+			"textures": "textures/items/color_black"
+		},
+		"brr_color_gray": {
+			"textures": "textures/items/color_gray"
+		},
+		"brr_color_magenta": {
+			"textures": "textures/items/color_magenta"
+		},
+		"brr_color_light_blue": {
+			"textures": "textures/items/color_light_blue"
+		},
+		"brr_color_rgb": {
+			"textures": "textures/items/color_rgb"
+		},
+		"brr_ornament_pot": {
+			"textures": "textures/items/pot"
+		},
+		"brr_ornament_lamp": {
+			"textures": "textures/items/lamp"
+		},
+		"brr_ornament_crane": {
+			"textures": "textures/items/store_ornaments"
+		},
+		"brr_ornament_farm_bales": {
+			"textures": "textures/items/farm_bales"
+		},
+		"brr_ornament_tree": {
+			"textures": "textures/items/hh_tree"
+		},
+		"brr_ornament_carpet": {
+			"textures": "textures/items/carpet"
+		},
+		"brr_ornament_bonnie_plush": {
+			"textures": "textures/items/bonnie_plush_item"
+		},
+		"brr_ornament_ring": {
+			"textures": "textures/items/ring"
+		},
+		"brr_ornament_springtrap_plush": {
+			"textures": "textures/items/springtrap_plush_item"
+		},
+		"brr_ornament_alastor_plush": {
+			"textures": "textures/items/alastor_plush_item"
+		},
+		"brr_ornament_seal_plush": {
+			"textures": "textures/items/seal_plush_item"
+		},
+		"brr_ornament_construction_site": {
+			"textures": "textures/items/construction_site"
+		},
+		"brr_ornament_yeeter": {
+			"textures": "textures/items/yeeter"
+		},
+		"brr_ornament_bushes": {
+			"textures": "textures/items/bushes"
+		},
+		"brr_ornament_snowy": {
+			"textures": "textures/items/snowy"
+		},
+		"brr_ornament_banana": {
+			"textures": "textures/items/banana_the_house_idk"
+		},
+		"brr_ornament_sans_plush": {
+			"textures": "textures/items/sans_plushie"
+		},
+		"brr_ornament_fan": {
+			"textures": "textures/items/fan_emoji"
+		},
+		"brr_ornament_mcdonalds_sign": {
+			"textures": "textures/items/mcdonalds_sign"
+		},
+		"brr_ornament_horns": {
+			"textures": "textures/items/horns"
+		},
+		"brr_ornament_melodie_plush": {
+			"textures": "textures/items/melodie_plushie"
+		},
+		"brr_ornament_janet_plush": {
+			"textures": "textures/items/janet_plushie"
+		},
+		"brr_particle_purple_ring": {
+			"textures": "textures/items/purple_ring"
+		},
+		"brr_particle_blue_flame": {
+			"textures": "textures/items/blue_flame"
+		},
+		"brr_particle_green_sphere": {
+			"textures": "textures/items/green_sphere"
+		},
+		"brr_particle_red_trail": {
+			"textures": "textures/items/red_trail"
+		},
+		"brr_particle_fire_ring": {
+			"textures": "textures/items/fire_ring"
+		},
+		"brr_nothing": {
+			"textures": "textures/items/the void"
+		},
+		"brr_tag_lover": {
+			"textures": "textures/items/tag_lover"
+		},
+		"brr_tag_winner": {
+			"textures": "textures/items/tag_winner"
+		},
+		"brr_tag_og": {
+			"textures": "textures/items/tag_og"
+		},
+		"brr_tag_bunny": {
+			"textures": "textures/items/tag_bunny"
+		},
+		"brr_tag_cat": {
+			"textures": "textures/items/tag_cat"
+		}
+	}
+}
