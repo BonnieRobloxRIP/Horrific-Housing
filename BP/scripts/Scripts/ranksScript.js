@@ -1,7 +1,7 @@
 import { world, system } from '@minecraft/server';
-import { showEmojiList } from './uiScript.js'; // Importing showEmojiList from uiScript.js
+import { showEmojiMenu, setEmojis } from './uiScript.js'; // Importing showEmojiMenu from uiScript.js
 
-const emojis = [
+export const emojis = [
     { id: ":skull:", emoji: "", displayName: "Skull" },
     { id: ":pray:", emoji: "", displayName: "Pray" },
     { id: ":hh:", emoji: "", displayName: "Horrific housing" },
@@ -221,131 +221,134 @@ const emojis = [
     { id: ":rabbit6:", emoji: "", displayName: "Rabbit 6" }
 ]
 
+setEmojis(emojis); // so uiScript can use the emojis list
+
+export function sendRankedMessage(player, rawMessage) {
+    const tags = player.getTags();
+    let message = rawMessage;
+    let rankPrefix = "";
+
+    for (const emoji of emojis) {
+        message = message.replaceAll(emoji.id, emoji.emoji);
+    }
+
+    // Dev ranks
+    if (player.name === "BonnieRobloxRIP") rankPrefix += " ";
+    if (player.name === "Marshmallow997") rankPrefix += " ";
+    if (player.name === "niceninjapro") rankPrefix += " ";
+
+    if (["BonnieRobloxRIP", "Marshmallow997"].includes(player.name)) {
+        rankPrefix += "[§l§dDev§r] ";
+    }
+    if (player.name === "niceninjapro") {
+        rankPrefix += "[§l§dScriptor§r] ";
+    }
+
+    // Tags
+    if (tags.includes("tag_og")) rankPrefix += "[ §l§2OG§r] ";
+    if (tags.includes("tag_lover")) rankPrefix += "[ §l§dLover§r] ";
+    if (tags.includes("tag_winner")) rankPrefix += "[§l§bWinner§r] ";
+    if (tags.includes("tag_bunny")) rankPrefix += "[§fBunny§r] ";
+    if (tags.includes("tag_cat")) rankPrefix += "[§fCat§r] ";
+
+    if (tags.includes("game")) {
+        rankPrefix += "[§l§aGamer§r] ";
+    } else {
+        rankPrefix += "[§l§bLobby§r] ";
+    }
+
+    const text = `§r${rankPrefix}§r${player.name}: §f${message}`;
+    world.sendMessage({ rawtext: [{ text: text }] });
+}
+
 export const ranksScript = {
     Code: {
         execute() {
-            if (world.beforeEvents && world.beforeEvents.chatSend) {
-                world.beforeEvents.chatSend.subscribe((data) => {
-                    const player = data.sender;
+            // Chat tag and emoji thing
+            world.beforeEvents.chatSend.subscribe((data) => {
+                const player = data.sender;
+                const tags = player.getTags();
+                let message = data.message;
+                let rankPrefix = "";
+
+                if (message.toLowerCase() === "!emojis") {
+                    data.cancel = true;
+                    player.sendMessage("§eExit the chat window to see the emoji list!");
+                    system.runTimeout(() => showEmojiMenu(player), 60);
+                    return;
+                }
+
+                for (const emoji of emojis) {
+                    message = message.replaceAll(emoji.id, emoji.emoji);
+                }
+
+                // Dev ranks (chat)
+                if (player.name === "BonnieRobloxRIP") rankPrefix += " ";
+                if (player.name === "Marshmallow997") rankPrefix += " ";
+                if (player.name === "niceninjapro") rankPrefix += " ";
+
+                if (["BonnieRobloxRIP", "Marshmallow997"].includes(player.name)) {
+                    rankPrefix += "[§l§dDev§r] ";
+                }
+                if (player.name === "niceninjapro") {
+                    rankPrefix += "[§l§dScriptor§r] ";
+                }
+
+                // Tags (chat)
+                if (tags.includes("tag_og")) rankPrefix += "[ §l§2OG§r] ";
+                if (tags.includes("tag_lover")) rankPrefix += "[ §l§dLover§r] ";
+                if (tags.includes("tag_winner")) rankPrefix += "[§l§bWinner§r] ";
+                if (tags.includes("tag_bunny")) rankPrefix += "[§fBunny§r] ";
+                if (tags.includes("tag_cat")) rankPrefix += "[§fCat§r] ";
+
+                if (tags.includes("game")) {
+                    rankPrefix += "[§l§aGamer§r] ";
+                } else {
+                    rankPrefix += "[§l§bLobby§r] ";
+                }
+
+                const text = `§r${rankPrefix}§r${player.name}: §f${message}`;
+                world.sendMessage({ rawtext: [{ text: text }] });
+                data.cancel = true;
+            });
+
+            // Nametag updater thing
+            system.runInterval(() => {
+                for (let player of world.getPlayers()) {
                     const tags = player.getTags();
-                    let message = data.message;
                     let rankPrefix = "";
 
-                    if (message.toLowerCase() === "!emojis") {
-                        data.cancel = true; // Prevents the message from being sent
-                        system.run(() => showEmojiList(player, emojis)); // Runs the function
-                        return; // Stops further execution
-                    }
+                    if (player.name === "BonnieRobloxRIP") rankPrefix += " ";
+                    if (player.name === "Marshmallow997") rankPrefix += " ";
+                    if (player.name === "niceninjapro") rankPrefix += " ";
 
-                    // Replaces emoji IDs with actual emojis
-                    for (const emoji of emojis) {
-                        message = message.replaceAll(emoji.id, emoji.emoji);
-                    }
-
-                    // This adds the dev tag and ring emoji to our names before any other tags, all of these appear in chat not above players
-                    if (player.name === "BonnieRobloxRIP") {
-                        rankPrefix += " ";
-                    }
-
-                    if (player.name === "Marshmallow997") {
-                        rankPrefix += " ";
-                    }
-
-                    if (player.name === "niceninjapro") {
-                        rankPrefix += " ";
-                    }
-
-                    if (player.name === "BonnieRobloxRIP" || player.name === "Marshmallow997") {
+                    const playerNames = world.getPlayers().map(p => p.name);
+                    const bothDevsOnline = playerNames.includes("BonnieRobloxRIP") && playerNames.includes("Marshmallow997");
+                    if (["BonnieRobloxRIP", "Marshmallow997"].includes(player.name)) {
+                        if (bothDevsOnline) {
+                            rankPrefix += " ";
+                        }
                         rankPrefix += "[§l§dDev§r] ";
                     }
                     if (player.name === "niceninjapro") {
                         rankPrefix += "[§l§dScriptor§r] ";
                     }
 
-                    // If a player is tagged with lover this adds the lover tag before any tags after this
-                    if (tags.includes("tag_og")) {
-                        rankPrefix += "[ §l§2OG§r] ";
-                    }
-                    if (tags.includes("tag_lover")) {
-                        rankPrefix += "[ §l§dLover§r] ";
-                    }
-                    if (tags.includes("tag_winner")) {
-                        rankPrefix += "[§l§bWinner§r] ";
-                    }
-                    if (tags.includes("tag_bunny")) {
-                        rankPrefix += "[§fBunny§r] ";
-                    }
-                    if (tags.includes("tag_cat")) {
-                        rankPrefix += "[§fCat§r] ";
-                    }
+                    if (tags.includes("tag_og")) rankPrefix += "[§2§lOG§r] ";
+                    if (tags.includes("tag_lover")) rankPrefix += "[§r] ";
+                    if (tags.includes("tag_winner")) rankPrefix += "[§b§lWinner§r] ";
+                    if (tags.includes("tag_bunny")) rankPrefix += "[§fBunny§r] ";
+                    if (tags.includes("tag_cat")) rankPrefix += "[§fCat§r] ";
 
-                    // Adds the gamer tag if the player has the game tag, otherwise it adds lobby, the titles appear after any previous titles
                     if (tags.includes("game")) {
                         rankPrefix += "[§l§aGamer§r] ";
                     } else {
                         rankPrefix += "[§l§bLobby§r] ";
                     }
 
-                    const text = `§r${rankPrefix}§r${player.name}: §f${message}`;
-                    world.sendMessage({ rawtext: [{ text: text }] });
-                    data.cancel = true;
-                });
-
-                // This part updates the visible nametags above the player every few ticks
-                system.runInterval(() => {
-                    for (let player of world.getPlayers()) {
-                        const tags = player.getTags();
-                        let rankPrefix = "";
-
-                        // This adds the dev tag and ring emoji to our names before any other tags, all of these titles appear above the player not in chat
-                        if (player.name === "BonnieRobloxRIP") {
-                            rankPrefix += " ";
-                        }
-
-                        if (player.name === "Marshmallow997") {
-                            rankPrefix += " ";
-                        }
-
-                        if (player.name === "niceninjapro") {
-                            rankPrefix += " ";
-                        }
-
-                        if (player.name === "BonnieRobloxRIP" || player.name === "Marshmallow997") {
-                            rankPrefix += " ";
-                            rankPrefix += "[§l§dDev§r] ";
-                        }
-                        if (player.name === "niceninjapro") {
-                            rankPrefix += "[§l§dScriptor§r] ";
-                        }
-
-                        // If a player is tagged with lover this adds the lover tag before any tags after this
-                        if (tags.includes("tag_og")) {
-                            rankPrefix += "[§2§lOG§r] ";
-                        }
-                        if (tags.includes("tag_lover")) {
-                            rankPrefix += "[§r] ";
-                        }
-                        if (tags.includes("tag_winner")) {
-                            rankPrefix += "[§b§lWinner§r] ";
-                        }
-                        if (tags.includes("tag_bunny")) {
-                            rankPrefix += "[§fBunny§r] ";
-                        }
-                        if (tags.includes("tag_cat")) {
-                            rankPrefix += "[§fCat§r] ";
-                        }
-
-                        // Adds the gamer tag if the player has the game tag, otherwise it adds lobby, the titles appear after any previous titles
-                        if (tags.includes("game")) {
-                            rankPrefix += "[§l§aGamer§r] ";
-                        } else {
-                            rankPrefix += "[§l§bLobby§r] ";
-                        }
-
-                        player.nameTag = `${rankPrefix}${player.name}`;
-                    }
-                });
-            }
+                    player.nameTag = `${rankPrefix}${player.name}`;
+                }
+            });
         }
     }
-}
+};
