@@ -1,0 +1,75 @@
+{
+	"format_version": 2,
+	"metadata": {
+		"authors": [
+			"BonnieRobloxRIP"
+		],
+		"generated_with": {
+			"bridge": [
+				"2.7.45"
+			],
+			"dash": [
+				"0.11.7"
+			]
+		}
+	},
+	"header": {
+		"name": "Horrific Housing Extras",
+		"description": "Created By BonnieRobloxRIP for the map: Horrific Housing",
+		"min_engine_version": [
+			1,
+			21,
+			70
+		],
+		"uuid": "0b5577d3-2865-4ec3-9369-dc50a79eb21f",
+		"version": [
+			1,
+			1,
+			16
+		]
+	},
+	"modules": [
+		{
+			"type": "data",
+			"uuid": "70307354-3e3a-42cb-abb7-fa3b086032a1",
+			"version": [
+				1,
+				0,
+				0
+			]
+		},
+		{
+			"type": "script",
+			"language": "javascript",
+			"uuid": "3e7db9bc-2fd1-4989-a228-057658d80083",
+			"entry": "scripts/main.js",
+			"version": [
+				1,
+				0,
+				0
+			]
+		}
+	],
+	"dependencies": [
+		{
+			"uuid": "7d078c95-4370-4bec-9359-9b07cf194e04",
+			"version": [
+				1,
+				1,
+				16
+			]
+		},
+		{
+			"module_name": "@minecraft/server",
+			"version": "2.0.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-gametest",
+			"version": "1.0.0-beta"
+		},
+		{
+			"module_name": "@minecraft/server-ui",
+			"version": "2.0.0-beta"
+		}
+	]
+}
