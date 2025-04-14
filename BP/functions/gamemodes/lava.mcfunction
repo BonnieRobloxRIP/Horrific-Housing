@@ -1,0 +1,65 @@
+# lava levels
+execute if score gamemode game matches 6 if score "timer switch" game matches 1 run fill -32 -6 8 31 -6 71 barrier
+# lava
+execute if score "lava level" gamemodes matches 1 run fill -31 -4 9 30 -4 70 lava replace air
+execute if score "lava level" gamemodes matches 2 run fill -31 -3 9 30 -3 70 lava replace air
+execute if score "lava level" gamemodes matches 3 run fill -31 -2 9 30 -2 70 lava replace air
+execute if score "lava level" gamemodes matches 4 run fill -31 -1 9 30 -1 70 lava replace air
+execute if score "lava level" gamemodes matches 5 run fill -31 0 9 30 0 70 lava replace air
+execute if score "lava level" gamemodes matches 6 run fill -31 1 9 30 1 70 lava replace air
+execute if score "lava level" gamemodes matches 7 run fill -31 2 9 30 2 70 lava replace air
+execute if score "lava level" gamemodes matches 8 run fill -31 3 9 30 3 70 lava replace air
+execute if score "lava level" gamemodes matches 9 run fill -31 4 9 30 4 70 lava replace air
+execute if score "lava level" gamemodes matches 10 run fill -31 5 9 30 5 70 lava replace air
+execute if score "lava level" gamemodes matches 11 run fill -31 6 9 30 6 70 lava replace air
+execute if score "lava level" gamemodes matches 12 run fill -31 7 9 30 7 70 lava replace air
+execute if score "lava level" gamemodes matches 13 run fill -31 8 9 30 8 70 lava replace air
+execute if score "lava level" gamemodes matches 14 run fill -31 9 9 30 9 70 lava replace air
+execute if score "lava level" gamemodes matches 15 run fill -31 10 9 30 10 70 lava replace air
+execute if score "lava level" gamemodes matches 16 run fill -31 11 9 30 11 70 lava replace air
+execute if score "lava level" gamemodes matches 17 run fill -31 12 9 30 12 70 lava replace air
+execute if score "lava level" gamemodes matches 18 run fill -31 13 9 30 13 70 lava replace air
+execute if score "lava level" gamemodes matches 19 run fill -31 14 9 30 14 70 lava replace air
+execute if score "lava level" gamemodes matches 20 run fill -31 15 9 30 15 70 lava replace air
+# ladder
+execute if score "lava level" gamemodes matches 1 run fill -31 -4 9 30 -4 70 lava replace ladder
+execute if score "lava level" gamemodes matches 2 run fill -31 -3 9 30 -3 70 lava replace ladder
+execute if score "lava level" gamemodes matches 3 run fill -31 -2 9 30 -2 70 lava replace ladder
+execute if score "lava level" gamemodes matches 4 run fill -31 -1 9 30 -1 70 lava replace ladder
+execute if score "lava level" gamemodes matches 5 run fill -31 0 9 30 0 70 lava replace ladder
+execute if score "lava level" gamemodes matches 6 run fill -31 1 9 30 1 70 lava replace ladder
+execute if score "lava level" gamemodes matches 7 run fill -31 2 9 30 2 70 lava replace ladder
+execute if score "lava level" gamemodes matches 8 run fill -31 3 9 30 3 70 lava replace ladder
+execute if score "lava level" gamemodes matches 9 run fill -31 4 9 30 4 70 lava replace ladder
+execute if score "lava level" gamemodes matches 10 run fill -31 5 9 30 5 70 lava replace ladder
+execute if score "lava level" gamemodes matches 11 run fill -31 6 9 30 6 70 lava replace ladder
+execute if score "lava level" gamemodes matches 12 run fill -31 7 9 30 7 70 lava replace ladder
+execute if score "lava level" gamemodes matches 13 run fill -31 8 9 30 8 70 lava replace ladder
+execute if score "lava level" gamemodes matches 14 run fill -31 9 9 30 9 70 lava replace ladder
+execute if score "lava level" gamemodes matches 15 run fill -31 10 9 30 10 70 lava replace ladder
+execute if score "lava level" gamemodes matches 16 run fill -31 11 9 30 11 70 lava replace ladder
+execute if score "lava level" gamemodes matches 17 run fill -31 12 9 30 12 70 lava replace ladder
+execute if score "lava level" gamemodes matches 18 run fill -31 13 9 30 13 70 lava replace ladder
+execute if score "lava level" gamemodes matches 19 run fill -31 14 9 30 14 70 lava replace ladder
+execute if score "lava level" gamemodes matches 20 run fill -31 15 9 30 15 70 lava replace ladder
+# door
+execute if score "lava level" gamemodes matches 1 run fill -31 -4 9 30 -4 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 2 run fill -31 -3 9 30 -3 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 3 run fill -31 -2 9 30 -2 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 4 run fill -31 -1 9 30 -1 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 5 run fill -31 0 9 30 0 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 6 run fill -31 1 9 30 1 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 7 run fill -31 2 9 30 2 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 8 run fill -31 3 9 30 3 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 9 run fill -31 4 9 30 4 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 10 run fill -31 5 9 30 5 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 11 run fill -31 6 9 30 6 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 12 run fill -31 7 9 30 7 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 13 run fill -31 8 9 30 8 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 14 run fill -31 9 9 30 9 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 15 run fill -31 10 9 30 10 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 16 run fill -31 11 9 30 11 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 17 run fill -31 12 9 30 12 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 18 run fill -31 13 9 30 13 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 19 run fill -31 14 9 30 14 70 lava replace dark_oak_door
+execute if score "lava level" gamemodes matches 20 run fill -31 15 9 30 15 70 lava replace dark_oak_door
