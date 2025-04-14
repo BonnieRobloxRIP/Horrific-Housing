@@ -1,0 +1,16 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "brr:vheart",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "brr_vheart"
+			}
+		}
+	}
+}

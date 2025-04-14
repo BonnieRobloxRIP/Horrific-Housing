@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "brr:tag_winner",
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.tag"
+			}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "brr_tag_winner"
+			},
+			"minecraft:food": {},
+			"minecraft:use_modifiers": {
+				"use_duration": 999999
+			},
+			"minecraft:use_duration": 999999
+		}
+	}
+}

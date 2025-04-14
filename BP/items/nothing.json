@@ -1,0 +1,13 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "brr:nothing"
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "brr_nothing"
+			}
+		}
+	}
+}

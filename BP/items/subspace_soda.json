@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "brr:subspace_soda",
+			"menu_category": {
+				"category": "nature"
+			}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "brr_subspace_soda"
+			},
+			"minecraft:use_duration": 1,
+			"minecraft:food": {
+				"nutrition": 5,
+				"saturation_modifier": 1
+			},
+			"minecraft:use_animation": "drink"
+		}
+	}
+}

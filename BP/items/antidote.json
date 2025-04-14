@@ -1,0 +1,25 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "brr:antidote",
+			"menu_category": {
+				"category": "equipment"
+			}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "brr_antidote"
+			},
+			"minecraft:use_animation": "drink",
+			"minecraft:use_duration": 2,
+			"minecraft:food": {
+				"nutrition": 2,
+				"saturation_modifier": 1
+			},
+			"minecraft:custom_component": [
+				"brr:antidote"
+			]
+		}
+	}
+}

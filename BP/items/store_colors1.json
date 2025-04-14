@@ -1,0 +1,21 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "brr:store_colors1",
+			"menu_category": {
+				"category": "items"
+			}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "brr_store_colors"
+			},
+			"minecraft:food": {},
+			"minecraft:use_modifiers": {
+				"use_duration": 999999
+			},
+			"minecraft:use_duration": 999999
+		}
+	}
+}

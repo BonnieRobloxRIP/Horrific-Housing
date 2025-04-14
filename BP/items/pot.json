@@ -1,0 +1,22 @@
+{
+	"format_version": "1.20.30",
+	"minecraft:item": {
+		"description": {
+			"identifier": "brr:ornament_pot",
+			"menu_category": {
+				"category": "items",
+				"group": "itemGroup.name.ornament"
+			}
+		},
+		"components": {
+			"minecraft:icon": {
+				"texture": "brr_ornament_pot"
+			},
+			"minecraft:food": {},
+			"minecraft:use_modifiers": {
+				"use_duration": 999999
+			},
+			"minecraft:use_duration": 999999
+		}
+	}
+}
