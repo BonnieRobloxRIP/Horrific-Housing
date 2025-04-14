@@ -2,10 +2,10 @@
 	"format_version": "1.10.0",
 	"particle_effect": {
 		"description": {
-			"identifier": "brr:big_breeze1_purple",
+			"identifier": "brr:big_breeze2",
 			"basic_render_parameters": {
 				"material": "particles_add",
-				"texture": "textures/particle/sprite06"
+				"texture": "textures/particle/sprite04"
 			}
 		},
 		"components": {
@@ -33,7 +33,7 @@
 			"minecraft:particle_initial_speed": 10,
 			"minecraft:particle_motion_dynamic": {
 				"linear_acceleration": [
-					55,
+					-55,
 					1,
 					0
 				]

@@ -1,0 +1,70 @@
+{
+	"format_version": "1.10.0",
+	"particle_effect": {
+		"description": {
+			"identifier": "brr:glitch",
+			"basic_render_parameters": {
+				"material": "particles_add",
+				"texture": "textures/particle/sprite05.png"
+			}
+		},
+		"components": {
+			"minecraft:emitter_local_space": {
+				"position": true,
+				"rotation": true,
+				"velocity": true
+			},
+			"minecraft:emitter_rate_instant": {
+				"num_particles": 25
+			},
+			"minecraft:emitter_lifetime_looping": {
+				"active_time": 1
+			},
+			"minecraft:emitter_shape_sphere": {
+				"radius": 1,
+				"surface_only": true
+			},
+			"minecraft:particle_lifetime_expression": {
+				"max_lifetime": 0.5
+			},
+			"minecraft:particle_initial_spin": {
+				"rotation": 1,
+				"rotation_rate": 250
+			},
+			"minecraft:particle_initial_speed": "math.random(1,5)",
+			"minecraft:particle_motion_dynamic": {
+				"linear_drag_coefficient": -2,
+				"rotation_acceleration": 250,
+				"rotation_drag_coefficient": 1
+			},
+			"minecraft:particle_appearance_billboard": {
+				"size": [
+					0.05,
+					0.05
+				],
+				"facing_camera_mode": "rotate_xyz",
+				"uv": {
+					"texture_width": 16,
+					"texture_height": 160,
+					"flipbook": {
+						"base_UV": [
+							0,
+							0
+						],
+						"size_UV": [
+							3,
+							2
+						],
+						"step_UV": [
+							0,
+							16
+						],
+						"frames_per_second": 10,
+						"max_frame": 200,
+						"loop": true
+					}
+				}
+			}
+		}
+	}
+}
