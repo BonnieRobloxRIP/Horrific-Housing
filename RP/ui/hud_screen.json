@@ -1,0 +1,46 @@
+{
+	"namespace": "hud",
+	"beta_text_panel": {
+		"type": "panel",
+		"size": [
+			100,
+			15
+		],
+		"offset": [
+			35,
+			-5
+		],
+		"anchor_from": "bottom_right",
+		"anchor_to": "bottom_right",
+		"layer": 50,
+		"controls": [
+			{
+				"beta_label": {
+					"type": "label",
+					"text": "v.Beta-0.9.1",
+					"font_type": "default",
+					"color": "white",
+					"shadow": true,
+					"size": [
+						100,
+						15
+					],
+					"layer": 50
+				}
+			}
+		]
+	},
+	"hud_content": {
+		"modifications": [
+			{
+				"array_name": "controls",
+				"operation": "insert_front",
+				"value": [
+					{
+						"beta_text_panel@hud.beta_text_panel": {}
+					}
+				]
+			}
+		]
+	}
+}
