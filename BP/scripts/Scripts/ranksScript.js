@@ -1,5 +1,6 @@
 import { world, system } from '@minecraft/server';
-import { showEmojiMenu, setEmojis } from './uiScript.js'; // Importing showEmojiMenu from uiScript.js
+import { showEmojiMenu, setEmojis } from './UI/emojiMenuScript.js';
+import { showStatsMenu } from './UI/statsMenuScript.js';
 
 export const emojis = [
     { id: ":skull:", emoji: "", displayName: "Skull" },
@@ -221,7 +222,7 @@ export const emojis = [
     { id: ":rabbit6:", emoji: "", displayName: "Rabbit 6" }
 ]
 
-setEmojis(emojis); // so uiScript can use the emojis list
+setEmojis(emojis); // so emojiMenuScript can use the emojis list
 
 export function sendRankedMessage(player, rawMessage) {
     const tags = player.getTags();
@@ -277,7 +278,13 @@ export const ranksScript = {
                     system.runTimeout(() => showEmojiMenu(player), 60);
                     return;
                 }
-
+                if (message === "!stats") {
+                    data.cancel = true;
+                    player.sendMessage("§eExit the chat window to see the stats menu!");
+                    system.runTimeout(() => showStatsMenu(player), 60);
+                    return;
+                }
+                
                 for (const emoji of emojis) {
                     message = message.replaceAll(emoji.id, emoji.emoji);
                 }
