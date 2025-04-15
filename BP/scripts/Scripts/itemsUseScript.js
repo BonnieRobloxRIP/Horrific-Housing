@@ -227,6 +227,7 @@ export const itemsUseScript = {
                         health.resetToMaxValue();
                     }
                     let tags = player.getTags()
+                    player.runCommand("clear @s");
                     for (let tag of tags) {
                         if (antidoteClearTags.includes(tag)) {
                             player.removeTag(tag)
