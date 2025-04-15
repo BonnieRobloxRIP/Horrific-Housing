@@ -1,18 +1,15 @@
-// Imports
 import { world, system } from "@minecraft/server";
 import { ActionFormData, ModalFormData, MessageFormData } from "@minecraft/server-ui";
 import { sendRankedMessage } from "Scripts/ranksScript.js";
 import { getScore, setScore, removeScore, getOrCreateObjective } from "./scoreUtils.js";
 import { colorCodes, heartOptions, getFormattedText, getHeartStyle } from "./textStyleUtils.js";
 
-// Internal State
 let internalEmojis = [];
 
 export function setEmojis(list) {
     internalEmojis = list;
 }
 
-// Scoreboard helper
 function getScoreInternal(player, objectiveName) {
     const objective = getOrCreateObjective(objectiveName);
     try {
@@ -24,12 +21,10 @@ function getScoreInternal(player, objectiveName) {
 
 export { setScore, getScoreInternal as getScore, removeScore };
 
-// Main UI function
 export function showEmojiMenu(player) {
     const emojis = internalEmojis;
     const MAX_FAVORITES = 10;
 
-    // Local helpers scoped to this UI module
     function getFavorites(p) {
         return emojis.filter(e => p.hasTag(`fav_${e.id}`)).sort((a, b) => a.id.localeCompare(b.id));
     }
