@@ -13,8 +13,8 @@ function getPlayerStats(player) {
         coins: getScore(player, "coins"),
         wins: getScore(player, "wins"),
         name: player.name,
-        ranks: tags.filter(tag => tag.startsWith("tag_")), // Equipped tags
-        allTags: tags // Includes ownership tags like tag_bunny1
+        ranks: tags.filter(tag => tag.startsWith("tag_")),
+        allTags: tags
     };
 }
 
@@ -27,7 +27,6 @@ function formatPlayerButton(viewer, player, sortBy) {
         .map(tag => tagDisplayMap[tag])
         .join(" ");
 
-    // Add custom Unicode name tags
     let namePrefix = "";
     if (player.name === "BonnieRobloxRIP") namePrefix += " ";
     if (player.name === "Marshmallow997") namePrefix += " ";
@@ -78,7 +77,7 @@ export function showStatsMenu(player) {
     }
 
     form.show(player).then(res => {
-        if (res.canceled) return; // Just exit. No reopening!
+        if (res.canceled) return;
 
         const index = res.selection;
 
@@ -112,11 +111,13 @@ function showPlayerDetails(viewer, target) {
     const coins = getScore(target, "coins");
 
     const form = new ActionFormData()
-        .title(getFormattedText(viewer, title))
+        .title(viewer, title)
         .body(`
 Name: ${target.name}
+
  Wins: ${wins}
  Coins: ${coins}
+
 Tags: ${ownedTagsFormatted || "None"}
         `.trim()) // Unformatted body
         .button(getFormattedText(viewer, " Back"));
