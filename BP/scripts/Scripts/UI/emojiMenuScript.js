@@ -80,7 +80,7 @@ export function showEmojiMenu(player) {
         }
 
         form.show(p).then(r => {
-            if (r.canceled || r.selection === 0) return showMainMenu(p);
+            if (r.canceled) return;
 
             const selected = matches[r.selection - 1];
             if (!selected) return;
@@ -116,7 +116,7 @@ export function showEmojiMenu(player) {
         }
 
         form.show(p).then(r => {
-            if (r.canceled || r.selection === 0) return showMainMenu(p);
+            if (r.canceled) return;
 
             const selected = favs[r.selection - 1];
             if (!selected) return;
