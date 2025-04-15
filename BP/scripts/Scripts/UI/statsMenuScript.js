@@ -18,7 +18,7 @@ function getPlayerStats(player) {
     };
 }
 
-function formatPlayerButton(player, sortBy) {
+function formatPlayerButton(viewer, player, sortBy) {
     const stats = getPlayerStats(player);
     const validTags = Object.keys(tagDisplayMap);
 
@@ -39,8 +39,8 @@ function formatPlayerButton(player, sortBy) {
     }
 
     let extra = "";
-    if (sortBy === "wins") extra = `   §l§bWins: ${stats.wins}`;
-    else if (sortBy === "coins") extra = `   §l§eCoins: ${stats.coins}`;
+    if (sortBy === "wins") extra = `  §l§b Wins: ${stats.wins}`;
+    else if (sortBy === "coins") extra = `  §l§e Coins: ${stats.coins}`;
 
     let dynamicRoleTag = "";
 
@@ -111,14 +111,14 @@ function showPlayerDetails(viewer, target) {
     const coins = getScore(target, "coins");
 
     const form = new ActionFormData()
-        .title(viewer, title)
+        .title(getFormattedText(viewer, title))
         .body(`
-Name: ${target.name}\n
+\nName: ${target.name}
 
-§l§b Wins: ${wins}
-§l§e Coins: ${coins}\n
+\n§l§b Wins: ${wins}
+§l§e Coins: ${coins}
 
-§l§8Tags§r: ${ownedTagsFormatted || "None"}
+\n§l§8Tags§r: ${ownedTagsFormatted || "None"}
         `.trim()) // Unformatted body
         .button(getFormattedText(viewer, " Back"));
 
