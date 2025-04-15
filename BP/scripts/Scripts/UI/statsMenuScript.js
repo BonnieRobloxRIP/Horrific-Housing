@@ -1,6 +1,6 @@
 import { world, system } from "@minecraft/server";
 import { ActionFormData, ModalFormData } from "@minecraft/server-ui";
-import { getFormattedText, colorCodes } from "./textStyleUtils.js";
+import { getFormattedText, colorCodes, tagDisplayMap, ownedTagMap } from "./textStyleUtils.js";
 import { getScore, setScore } from "./scoreUtils.js";
 
 function getOnlinePlayers() {
@@ -8,23 +8,50 @@ function getOnlinePlayers() {
 }
 
 function getPlayerStats(player) {
+    const tags = player.getTags();
     return {
         coins: getScore(player, "coins"),
         wins: getScore(player, "wins"),
         name: player.name,
-        ranks: player.getTags().filter(tag => tag.startsWith("tag_"))
+        ranks: tags.filter(tag => tag.startsWith("tag_")), // Equipped tags
+        allTags: tags // Includes ownership tags like tag_bunny1
     };
 }
 
 function formatPlayerButton(viewer, player, sortBy) {
     const stats = getPlayerStats(player);
-    const ranks = stats.ranks.map(tag => `[${tag.replace("tag_", "")}]`).join(" ");
+    const validTags = Object.keys(tagDisplayMap);
+
+    const ranks = stats.ranks
+        .filter(tag => validTags.includes(tag))
+        .map(tag => tagDisplayMap[tag])
+        .join(" ");
+
+    // Add custom Unicode name tags
+    let namePrefix = "";
+    if (player.name === "BonnieRobloxRIP") namePrefix += " ";
+    if (player.name === "Marshmallow997") namePrefix += " ";
+    if (player.name === "niceninjapro") namePrefix += " ";
+
+    if (["BonnieRobloxRIP", "Marshmallow997"].includes(player.name)) {
+        namePrefix += "[§l§dDev§r] ";
+    } else if (player.name === "niceninjapro") {
+        namePrefix += "[§l§dScriptor§r] ";
+    }
+
     let extra = "";
+    if (sortBy === "wins") extra = `   Wins: ${stats.wins}`;
+    else if (sortBy === "coins") extra = `   Coins: ${stats.coins}`;
 
-    if (sortBy === "wins") extra = `  Wins: ${stats.wins}`;
-    else if (sortBy === "coins") extra = `  Coins: ${stats.coins}`;
+    let dynamicRoleTag = "";
 
-    return getFormattedText(viewer, `${ranks} ${player.name}${extra}`);
+    if (stats.ranks.includes("game")) {
+        dynamicRoleTag = tagDisplayMap["game"];
+    } else {
+        dynamicRoleTag = tagDisplayMap["lobby"];
+    }
+
+    return `${namePrefix}${ranks} ${dynamicRoleTag} ${player.name}${extra}`;
 }
 
 export function showStatsMenu(player) {
@@ -38,7 +65,7 @@ export function showStatsMenu(player) {
     form.button(getFormattedText(player, "Sort: Alphabetical"));
     form.button(getFormattedText(player, "Sort: Most Wins"));
     form.button(getFormattedText(player, "Sort: Most Coins"));
-    form.button(getFormattedText(player, "§8──── Player List ────"));
+    form.button(getFormattedText(player, "§8§l────§r§8 Player List §l────§r"));
 
     let sorted = players.map(p => ({ player: p, stats: getPlayerStats(p) }));
 
@@ -51,14 +78,15 @@ export function showStatsMenu(player) {
     }
 
     form.show(player).then(res => {
-        if (res.canceled) return;
+        if (res.canceled) return; // Just exit. No reopening!
+
         const index = res.selection;
 
         if (index === 0) return showSettings(player); // Settings
         if (index === 1) { setScore(player, "stats_sort_mode", 0); return showStatsMenu(player); } // Alphabetical
         if (index === 2) { setScore(player, "stats_sort_mode", 1); return showStatsMenu(player); } // Wins
         if (index === 3) { setScore(player, "stats_sort_mode", 2); return showStatsMenu(player); } // Coins
-        if (index === 4) return; // Divider
+        if (index === 4) return showStatsMenu(player); // divider, it opens the menu again if pressed
 
         const selectedPlayer = sorted[index - 5].player;
         showPlayerDetails(player, selectedPlayer);
@@ -66,17 +94,35 @@ export function showStatsMenu(player) {
 }
 
 function showPlayerDetails(viewer, target) {
+    const allTags = target.getTags();
+    const ownedTagsFormatted = allTags
+        .filter(tag => tag.endsWith("1") && ownedTagMap[tag])
+        .map(tag => ownedTagMap[tag])
+        .join(", ");
+
+    // Unicode name prefix
+    let unicodePrefix = "";
+    if (target.name === "BonnieRobloxRIP") unicodePrefix += " ";
+    if (target.name === "Marshmallow997") unicodePrefix += " ";
+    if (target.name === "niceninjapro") unicodePrefix += " ";
+
+    const title = `${unicodePrefix}[§l${target.name}§r]'s Stats`;
+
+    const wins = getScore(target, "wins");
+    const coins = getScore(target, "coins");
+
     const form = new ActionFormData()
-        .title(getFormattedText(viewer, ` ${target.name}'s Stats`))
-        .body(getFormattedText(viewer, `
-§lName:§r ${target.name}
-§lWins:§r ${getScore(target, "wins")}
-§lCoins:§r ${getScore(target, "coins")}
-§lRanks:§r ${target.getTags().filter(t => t.startsWith("tag_")).join(", ") || "None"}
-`))
+        .title(getFormattedText(viewer, title))
+        .body(`
+Name: ${target.name}
+ Wins: ${wins}
+ Coins: ${coins}
+Tags: ${ownedTagsFormatted || "None"}
+        `.trim()) // Unformatted body
         .button(getFormattedText(viewer, " Back"));
 
-    form.show(viewer).then(() => {
+    form.show(viewer).then(res => {
+        if (res.canceled) return;
         showStatsMenu(viewer);
     });
 }
