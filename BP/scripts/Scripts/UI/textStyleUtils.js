@@ -7,6 +7,7 @@ export const tagDisplayMap = {
     "tag_bunny": "[§fBunny§r]",
     "tag_cat": "[§fCat§r]",
     "game": "[§l§aGamer§r]",
+    "lobby": "[§l§bLobby§r]"
 };
 
 export const ownedTagMap = {
@@ -14,10 +15,10 @@ export const ownedTagMap = {
     "tag_lover1": "[ §l§dLover§r]",
     "tag_winner1": "[§l§bWinner§r]",
     "tag_bunny1": "[§fBunny§r]",
-    "tag_cat1": "[§fCat§r]",
+    "tag_cat1": "[§fCat§r]"
 };
 
-// color options for settings
+// Named color map
 export const colorCodes = {
     "§mRedstone§r": "§m", "§4Dark Red§r": "§4", "§cRed§r": "§c", "§nCopper§r": "§n", "§6Orange§r": "§6",
     "§pGold§r": "§p", "§gMinecoin Gold§r": "§g", "§eYellow§r": "§e", "§aGreen§r": "§a", "§qEmerald§r": "§q",
@@ -40,14 +41,14 @@ export const heartOptions = [
     { id: ":heart_hands:", emoji: "", displayName: "Heart Hands" }
 ];
 
-// gets the selected text color code from scoreboard
+// Gets the selected text color code from scoreboard
 export function getPlayerColor(player) {
     const colorScore = getScore(player, "textcolor");
     const colors = Object.values(colorCodes);
     return colors[Math.max(0, Math.min(colors.length - 1, colorScore))] ?? "§f";
 }
 
-// gets bold/italic text styles
+// Gets bold/italic text styles as array of formatting codes
 export function getPlayerStyles(player) {
     const styles = [];
     if (getScore(player, "textbold") === 1) styles.push("§l");
@@ -55,12 +56,12 @@ export function getPlayerStyles(player) {
     return styles;
 }
 
-// formatted text with color and styles
+// Fully formatted text with color and styles
 export function getFormattedText(player, text) {
     return `${getPlayerStyles(player).join("")}${getPlayerColor(player)}${text}§r`;
 }
 
-// returns selected heart emoji
+// Returns selected heart emoji
 export function getHeartStyle(player) {
     const score = getScore(player, "favheart");
     const index = Math.max(0, Math.min(heartOptions.length - 1, score));
