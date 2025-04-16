@@ -46,7 +46,10 @@ export function showEmojiMenu(player) {
                         .title(getFormattedText(p, "Favorites Full"))
                         .body("You’ve reached the maximum of 10 favorite emojis. Remove one before adding another.")
                         .button1("Ok")
-                        .show(p).then(() => goBackTo?.(p) ?? showMainMenu(p));
+                        .show(p).then(res => {
+                            if (res.canceled) return; // Do nothing if they just X out
+                            goBackTo?.(p) ?? showMainMenu(p);
+                        });
                     return;
                 } else {
                     p.addTag(`fav_${emoji.id}`);
@@ -76,6 +79,7 @@ export function showEmojiMenu(player) {
 
         form.show(p).then(r => {
             if (r.canceled) return;
+            if (r.selection === 0) return showMainMenu(p);
 
             const selected = matches[r.selection - 1];
             if (!selected) return;
@@ -112,6 +116,7 @@ export function showEmojiMenu(player) {
 
         form.show(p).then(r => {
             if (r.canceled) return;
+            if (r.selection === 0) return showMainMenu(p);
 
             const selected = favs[r.selection - 1];
             if (!selected) return;
@@ -146,6 +151,7 @@ export function showEmojiMenu(player) {
 
         form.show(p).then(r => {
             if (r.canceled) return;
+            if (r.selection === 0) return showMainMenu(p);
             const [colorIndex, heartIndex, boldOn, italicOn, countOn, promptOn, backSelected] = r.formValues;
 
             if (backSelected) {
