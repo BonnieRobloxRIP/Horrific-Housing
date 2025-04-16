@@ -23,9 +23,9 @@ function formatPlayerButton(viewer, player, sortBy) {
     const validTags = Object.keys(tagDisplayMap);
 
     const ranks = stats.ranks
-        .filter(tag => validTags.includes(tag))
+        .filter(tag => tagDisplayMap[tag])
         .map(tag => tagDisplayMap[tag])
-        .join(" ");
+        .join(" ") || "";
 
     let namePrefix = "";
     if (player.name === "BonnieRobloxRIP") namePrefix += " ";
@@ -34,7 +34,8 @@ function formatPlayerButton(viewer, player, sortBy) {
 
     if (["BonnieRobloxRIP", "Marshmallow997"].includes(player.name)) {
         namePrefix += "[§l§dDev§r] ";
-    } else if (player.name === "niceninjapro") {
+    }
+    if (player.name === "niceninjapro") {
         namePrefix += "[§l§dScriptor§r] ";
     }
 
@@ -105,19 +106,16 @@ function showPlayerDetails(viewer, target) {
     if (target.name === "Marshmallow997") unicodePrefix += " ";
     if (target.name === "niceninjapro") unicodePrefix += " ";
 
-    const title = `${unicodePrefix}[§l${target.name}§r]'s Stats`;
-
+    const title = `${unicodePrefix}${target.name}'s Stats`;
     const wins = getScore(target, "wins");
     const coins = getScore(target, "coins");
 
     const form = new ActionFormData()
-        .title(getFormattedText(viewer, title))
-        .body(`
+    form.title(title);
+    form.body(`
 \nName: ${target.name}
-
 \n§l§b Wins: ${wins}
 §l§e Coins: ${coins}
-
 \n§l§8Tags§r: ${ownedTagsFormatted || "None"}
         `.trim()) // Unformatted body
         .button(getFormattedText(viewer, " Back"));
