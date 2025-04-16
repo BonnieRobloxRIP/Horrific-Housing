@@ -33,10 +33,10 @@ function formatPlayerButton(viewer, player, sortBy) {
     if (player.name === "niceninjapro") namePrefix += " ";
 
     if (["BonnieRobloxRIP", "Marshmallow997"].includes(player.name)) {
-        namePrefix += "[§l§dDev§r] ";
+        namePrefix += "[§l§dDev§r]";
     }
     if (player.name === "niceninjapro") {
-        namePrefix += "[§l§dScriptor§r] ";
+        namePrefix += "[§l§dScriptor§r]";
     }
 
     let extra = "";
@@ -51,7 +51,14 @@ function formatPlayerButton(viewer, player, sortBy) {
         dynamicRoleTag = tagDisplayMap["lobby"];
     }
 
-    return `${namePrefix}${ranks} ${dynamicRoleTag} ${player.name}${extra}`;
+    const parts = [namePrefix.trim()];
+
+    if (ranks) parts.push(ranks);                 // Add formatted tag ranks like [Bunny], etc.
+    if (dynamicRoleTag) parts.push(dynamicRoleTag); // Gamer or Lobby
+    parts.push(player.name);
+    if (extra) parts.push(extra);
+
+    return parts.join(" ");
 }
 
 export function showStatsMenu(player) {
@@ -65,7 +72,7 @@ export function showStatsMenu(player) {
     form.button(getFormattedText(player, "Sort: Alphabetical"));
     form.button(getFormattedText(player, "Sort: Most Wins"));
     form.button(getFormattedText(player, "Sort: Most Coins"));
-    form.button(getFormattedText(player, "§8§l────§r§8 Player List §l────§r"));
+    form.button(getFormattedText(player, "§8§l──── Player List ────§r"));
 
     let sorted = players.map(p => ({ player: p, stats: getPlayerStats(p) }));
 
@@ -116,7 +123,7 @@ function showPlayerDetails(viewer, target) {
 \nName: ${target.name}
 \n§l§b Wins: ${wins}
 §l§e Coins: ${coins}
-\n§l§8Tags§r: ${ownedTagsFormatted || "None"}
+\n§l§7Tags§r: ${ownedTagsFormatted || "None"}
         `.trim()) // Unformatted body
         .button(getFormattedText(viewer, " Back"));
 
