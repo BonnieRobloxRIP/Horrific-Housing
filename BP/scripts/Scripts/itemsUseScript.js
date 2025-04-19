@@ -52,123 +52,123 @@ export const itemsUseScript = {
                 const player = event.source;
 
                 if (itemStack.typeId === "brr:spectate") {
-                    player.runCommandAsync("function items/spectate");
+                    player.runCommand("function items/spectate");
                 } else if (itemStack.typeId === "brr:game_stop") {
-                    player.runCommandAsync("function items/stop");
+                    player.runCommand("function items/stop");
                 } else if (itemStack.typeId === "brr:store") {
-                    player.runCommandAsync("function items/store");
+                    player.runCommand("function items/store");
                 } else if (itemStack.typeId === "brr:inventory") {
-                    player.runCommandAsync("function items/inventory/inventory");
+                    player.runCommand("function items/inventory/inventory");
                 } else if (itemStack.typeId === "brr:home_page") {
-                    player.runCommandAsync("function items/inventory/home_page");
+                    player.runCommand("function items/inventory/home_page");
                 } else if (itemStack.typeId === "brr:store_colors") {
-                    player.runCommandAsync("function items/inventory/colors");
+                    player.runCommand("function items/inventory/colors");
                 } else if (itemStack.typeId === "brr:store_colors1") {
-                    player.runCommandAsync("function items/inventory/colors");
+                    player.runCommand("function items/inventory/colors");
                 } else if (itemStack.typeId === "brr:store_ornaments") {
-                    player.runCommandAsync("function items/inventory/ornaments");
+                    player.runCommand("function items/inventory/ornaments");
                 } else if (itemStack.typeId === "brr:store_ornaments1") {
-                    player.runCommandAsync("function items/inventory/ornaments");
+                    player.runCommand("function items/inventory/ornaments");
                 } else if (itemStack.typeId === "brr:store_particles") {
-                    player.runCommandAsync("function items/inventory/particles");
+                    player.runCommand("function items/inventory/particles");
                 } else if (itemStack.typeId === "brr:store_particles1") {
-                    player.runCommandAsync("function items/inventory/particles");
+                    player.runCommand("function items/inventory/particles");
                 } else if (itemStack.typeId === "brr:store_perks1") {
-                    player.runCommandAsync("function items/inventory/perks");
+                    player.runCommand("function items/inventory/perks");
                 } else if (itemStack.typeId === "brr:store_tags") {
-                    player.runCommandAsync("function items/inventory/tags");
+                    player.runCommand("function items/inventory/tags");
                 } else if (itemStack.typeId === "brr:store_tags1") {
-                    player.runCommandAsync("function items/inventory/tags");
+                    player.runCommand("function items/inventory/tags");
                 } else if (itemStack.typeId === "brr:color_red") {
-                    player.runCommandAsync("function items/inventory/colors/red");
+                    player.runCommand("function items/inventory/colors/red");
                 } else if (itemStack.typeId === "brr:color_blue") {
-                    player.runCommandAsync("function items/inventory/colors/blue");
+                    player.runCommand("function items/inventory/colors/blue");
                 } else if (itemStack.typeId === "brr:color_pink") {
-                    player.runCommandAsync("function items/inventory/colors/pink");
+                    player.runCommand("function items/inventory/colors/pink");
                 } else if (itemStack.typeId === "brr:color_green") {
-                    player.runCommandAsync("function items/inventory/colors/green");
+                    player.runCommand("function items/inventory/colors/green");
                 } else if (itemStack.typeId === "brr:color_yellow") {
-                    player.runCommandAsync("function items/inventory/colors/yellow");
+                    player.runCommand("function items/inventory/colors/yellow");
                 } else if (itemStack.typeId === "brr:color_orange") {
-                    player.runCommandAsync("function items/inventory/colors/orange");
+                    player.runCommand("function items/inventory/colors/orange");
                 } else if (itemStack.typeId === "brr:color_purple") {
-                    player.runCommandAsync("function items/inventory/colors/purple");
+                    player.runCommand("function items/inventory/colors/purple");
                 } else if (itemStack.typeId === "brr:color_white") {
-                    player.runCommandAsync("function items/inventory/colors/white");
+                    player.runCommand("function items/inventory/colors/white");
                 } else if (itemStack.typeId === "brr:color_black") {
-                    player.runCommandAsync("function items/inventory/colors/black");
+                    player.runCommand("function items/inventory/colors/black");
                 } else if (itemStack.typeId === "brr:color_gray") {
-                    player.runCommandAsync("function items/inventory/colors/gray");
+                    player.runCommand("function items/inventory/colors/gray");
                 } else if (itemStack.typeId === "brr:color_magenta") {
-                    player.runCommandAsync("function items/inventory/colors/magenta");
+                    player.runCommand("function items/inventory/colors/magenta");
                 } else if (itemStack.typeId === "brr:color_light_blue") {
-                    player.runCommandAsync("function items/inventory/colors/light_blue");
+                    player.runCommand("function items/inventory/colors/light_blue");
                 } else if (itemStack.typeId === "brr:color_rgb") {
-                    player.runCommandAsync("function items/inventory/colors/rgb");
+                    player.runCommand("function items/inventory/colors/rgb");
                 } else if (itemStack.typeId === "brr:ornament_pot") {
-                    player.runCommandAsync("function items/inventory/ornaments/pot");
+                    player.runCommand("function items/inventory/ornaments/pot");
                 } else if (itemStack.typeId === "brr:ornament_lamp") {
-                    player.runCommandAsync("function items/inventory/ornaments/lamp");
+                    player.runCommand("function items/inventory/ornaments/lamp");
                 } else if (itemStack.typeId === "brr:ornament_crane") {
-                    player.runCommandAsync("function items/inventory/ornaments/crane");
+                    player.runCommand("function items/inventory/ornaments/crane");
                 } else if (itemStack.typeId === "brr:ornament_farm_bales") {
-                    player.runCommandAsync("function items/inventory/ornaments/farm_bales");
+                    player.runCommand("function items/inventory/ornaments/farm_bales");
                 } else if (itemStack.typeId === "brr:ornament_tree") {
-                    player.runCommandAsync("function items/inventory/ornaments/tree");
+                    player.runCommand("function items/inventory/ornaments/tree");
                 } else if (itemStack.typeId === "brr:ornament_carpet") {
-                    player.runCommandAsync("function items/inventory/ornaments/carpet");
+                    player.runCommand("function items/inventory/ornaments/carpet");
                 } else if (itemStack.typeId === "brr:ornament_bonnie_plush") {
-                    player.runCommandAsync("function items/inventory/ornaments/bonnie_plush");
+                    player.runCommand("function items/inventory/ornaments/bonnie_plush");
                 } else if (itemStack.typeId === "brr:ornament_ring") {
-                    player.runCommandAsync("function items/inventory/ornaments/ring");
+                    player.runCommand("function items/inventory/ornaments/ring");
                 } else if (itemStack.typeId === "brr:ornament_alastor_plush") {
-                    player.runCommandAsync("function items/inventory/ornaments/alastor_plush");
+                    player.runCommand("function items/inventory/ornaments/alastor_plush");
                 } else if (itemStack.typeId === "brr:ornament_springtrap_plush") {
-                    player.runCommandAsync("function items/inventory/ornaments/springtrap_plush");
+                    player.runCommand("function items/inventory/ornaments/springtrap_plush");
                 } else if (itemStack.typeId === "brr:ornament_seal_plush") {
-                    player.runCommandAsync("function items/inventory/ornaments/seal_plush");
+                    player.runCommand("function items/inventory/ornaments/seal_plush");
                 } else if (itemStack.typeId === "brr:ornament_construction_site") {
-                    player.runCommandAsync("function items/inventory/ornaments/construction_site");
+                    player.runCommand("function items/inventory/ornaments/construction_site");
                 } else if (itemStack.typeId === "brr:ornament_yeeter") {
-                    player.runCommandAsync("function items/inventory/ornaments/yeeter");
+                    player.runCommand("function items/inventory/ornaments/yeeter");
                 } else if (itemStack.typeId === "brr:ornament_bushes") {
-                    player.runCommandAsync("function items/inventory/ornaments/bushes");
+                    player.runCommand("function items/inventory/ornaments/bushes");
                 } else if (itemStack.typeId === "brr:ornament_snowy") {
-                    player.runCommandAsync("function items/inventory/ornaments/snowy");
+                    player.runCommand("function items/inventory/ornaments/snowy");
                 } else if (itemStack.typeId === "brr:ornament_banana") {
-                    player.runCommandAsync("function items/inventory/ornaments/banana");
+                    player.runCommand("function items/inventory/ornaments/banana");
                 } else if (itemStack.typeId === "brr:ornament_sans_plush") {
-                    player.runCommandAsync("function items/inventory/ornaments/sans_plush");
+                    player.runCommand("function items/inventory/ornaments/sans_plush");
                 } else if (itemStack.typeId === "brr:ornament_fan") {
-                    player.runCommandAsync("function items/inventory/ornaments/fan");
+                    player.runCommand("function items/inventory/ornaments/fan");
                 } else if (itemStack.typeId === "brr:ornament_mcdonalds_sign") {
-                    player.runCommandAsync("function items/inventory/ornaments/mcdonalds_sign");
+                    player.runCommand("function items/inventory/ornaments/mcdonalds_sign");
                 } else if (itemStack.typeId === "brr:ornament_horns") {
-                    player.runCommandAsync("function items/inventory/ornaments/horns");
+                    player.runCommand("function items/inventory/ornaments/horns");
                 } else if (itemStack.typeId === "brr:ornament_melodie_plush") {
-                    player.runCommandAsync("function items/inventory/ornaments/melodie_plush");
+                    player.runCommand("function items/inventory/ornaments/melodie_plush");
                 } else if (itemStack.typeId === "brr:ornament_janet_plush") {
-                    player.runCommandAsync("function items/inventory/ornaments/janet_plush");
+                    player.runCommand("function items/inventory/ornaments/janet_plush");
                 } else if (itemStack.typeId === "brr:particle_purple_ring") {
-                    player.runCommandAsync("function items/inventory/particles/purple_ring");
+                    player.runCommand("function items/inventory/particles/purple_ring");
                 } else if (itemStack.typeId === "brr:particle_blue_flame") {
-                    player.runCommandAsync("function items/inventory/particles/blue_flame");
+                    player.runCommand("function items/inventory/particles/blue_flame");
                 } else if (itemStack.typeId === "brr:particle_green_sphere") {
-                    player.runCommandAsync("function items/inventory/particles/green_sphere");
+                    player.runCommand("function items/inventory/particles/green_sphere");
                 } else if (itemStack.typeId === "brr:particle_red_trail") {
-                    player.runCommandAsync("function items/inventory/particles/red_trail");
+                    player.runCommand("function items/inventory/particles/red_trail");
                 } else if (itemStack.typeId === "brr:particle_fire_ring") {
-                    player.runCommandAsync("function items/inventory/particles/fire_ring");
+                    player.runCommand("function items/inventory/particles/fire_ring");
                 } else if (itemStack.typeId === "brr:tag_lover") {
-                    player.runCommandAsync("function items/inventory/tags/lover");
+                    player.runCommand("function items/inventory/tags/lover");
                 } else if (itemStack.typeId === "brr:tag_og") {
-                    player.runCommandAsync("function items/inventory/tags/og");
+                    player.runCommand("function items/inventory/tags/og");
                 } else if (itemStack.typeId === "brr:tag_winner") {
-                    player.runCommandAsync("function items/inventory/tags/winner");
+                    player.runCommand("function items/inventory/tags/winner");
                 } else if (itemStack.typeId === "brr:tag_bunny") {
-                    player.runCommandAsync("function items/inventory/tags/bunny");
+                    player.runCommand("function items/inventory/tags/bunny");
                 } else if (itemStack.typeId === "brr:tag_cat") {
-                    player.runCommandAsync("function items/inventory/tags/cat");
+                    player.runCommand("function items/inventory/tags/cat");
                 } else if (itemStack.typeId === "brr:deathnote") {
                     if (player.getTags().includes("game")) {
                         // Get all players with the "game" tag and map them to their nameTags
@@ -187,10 +187,10 @@ export const itemsUseScript = {
                                     const selectedPlayerName = playersInGame[formData.formValues[0]];
                                     const targetPlayer = world.getAllPlayers().find(p => p.nameTag === selectedPlayerName);
                                     if (targetPlayer && targetPlayer.hasTag("game")) {
-                                        targetPlayer.runCommandAsync("tag @s add deathnote")
-                                        targetPlayer.runCommandAsync("title @s times 200 20 0")
-                                        targetPlayer.runCommandAsync("title @s title Death Note")
-                                        targetPlayer.runCommandAsync("camera @s fade time 10 1 0 color 150 150 150")
+                                        targetPlayer.runCommand("tag @s add deathnote")
+                                        targetPlayer.runCommand("title @s times 200 20 0")
+                                        targetPlayer.runCommand("title @s title Death Note")
+                                        targetPlayer.runCommand("camera @s fade time 10 1 0 color 150 150 150")
                                         player.runCommand(`clear @s brr:deathnote 0 1`);
                                         world.sendMessage(`§b${player.name} §9Used the death note!`)
                                         system.runTimeout(() => {
@@ -206,12 +206,12 @@ export const itemsUseScript = {
                         player.sendMessage("§bYou may not use this item from the lobby, dummy!");
                     }
                 } else if (itemStack.typeId === "brr:game_start") {
-                    player.runCommandAsync("function items/start");
+                    player.runCommand("function items/start");
                 } else {
                     for (const voteItem of voteItems) {
                         if (itemStack.typeId === voteItem.item) {
                             player.sendMessage(`§aYou have voted for the §l${voteItem.displayName}§r§a gamemode!`);
-                            player.runCommandAsync(voteItem.command);
+                            player.runCommand(voteItem.command);
                             break;
                         }
                     }
@@ -233,7 +233,7 @@ export const itemsUseScript = {
                             player.removeTag(tag)
                         }
                     }
-                    player.runCommandAsync("camera @s fade time 1 2 1 color 0 0 0")
+                    player.runCommand("camera @s fade time 1 2 1 color 0 0 0")
                     world.getDimension("overworld").spawnParticle("minecraft:brr:green_circle", player.location)
                 }
                 if (event.itemStack.typeId === "brr:banana") {
@@ -250,7 +250,7 @@ export const itemsUseScript = {
                 }
                 if (event.itemStack.typeId === "brr:taco") {
                     let player = event.source
-                    player.addEffect("minecraft:instant_health", 20, { amplifier: 1, showParticles: true })
+                    player.addEffect("minecraft:instant_health", 20, { amplifier: 2, showParticles: true })
                 }
             })
         }
