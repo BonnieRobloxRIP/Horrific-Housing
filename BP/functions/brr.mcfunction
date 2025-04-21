@@ -11,6 +11,8 @@ tag @s add house10
 tag @s add house11
 tag @s add house12
 tag @s add game
+tag @s remove lobby
+clear @s
 scoreboard players set gamemode game 5
 function game_functions/game_setup/house_loader
 structure load event_data -5 5 6
