@@ -19,7 +19,7 @@ give @a brr:colette_plush 1 0 {"can_place_on":{"blocks":["grass_block", "concret
 give @a brr:accelerator_plush 1 0 {"can_place_on":{"blocks":["grass_block", "concrete", "planks", "wood", "stained_glass", "packed_ice", "magma", "honey_block", "brr:rgb_block", "brr:invisible", "leaves", "stonebrick", "stone_brick_stairs", "obsidian", "stone"]}}
 
 stopsound @a[tag=game]
-playsound music.game.subspace_game02 @a[tag=game]
+playsound music.game.subspace.game02 @a[tag=game]
 scoreboard players set @a[tag=game] music_game 7060
 
 # structure load lobby -7 -27 -20
