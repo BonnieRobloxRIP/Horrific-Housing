@@ -245,12 +245,12 @@ export const itemsUseScript = {
                 if (event.itemStack.typeId === "brr:burger") {
                     let player = event.source
                     player.addEffect("minecraft:regeneration", 300, { amplifier: 250, showParticles: true })
-                    player.addEffect("minecraft:slowness", 300, { amplifier: 1, showParticles: true })
+                    player.addEffect("minecraft:slowness", 300, { amplifier: 2, showParticles: true })
                     player.addEffect("minecraft:resistance", 300, { amplifier: 250, showParticles: true })
                 }
                 if (event.itemStack.typeId === "brr:taco") {
                     let player = event.source
-                    player.addEffect("minecraft:instant_health", 20, { amplifier: 2, showParticles: true })
+                    player.addEffect("minecraft:instant_health", 20, { amplifier: 1, showParticles: true })
                 }
             })
         }
