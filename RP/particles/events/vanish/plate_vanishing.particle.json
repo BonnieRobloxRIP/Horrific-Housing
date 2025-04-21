@@ -4,7 +4,7 @@
 		"description": {
 			"identifier": "brr:plate_vanishing",
 			"basic_render_parameters": {
-				"material": "particles_blend",
+				"material": "particles_add",
 				"texture": "textures/particle/alert"
 			}
 		},
