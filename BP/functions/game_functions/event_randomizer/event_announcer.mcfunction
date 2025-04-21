@@ -68,16 +68,16 @@ execute unless score "gamemode" game matches 1 if score "event randomizer" game 
 execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 67 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §bOne plate will turn into a tropical island"}]}
 execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 68 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §a§lAll plates will merge!"}]}
 execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 69 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §bAn anvil falls from the sky!"}]}
-execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 70 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §"}]}
+execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 70 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §dHe's a magic man :D"}]}
 execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 71 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §bSomeone's plate will be raised"}]}
 execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 72 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §bA field gate is opening up"}]}
 execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 73 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §bA spaceship is preparing for launch"}]}
-execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 74 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §"}]}
+execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 74 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §7Someone's giving a speech, better listen closely"}]}
 execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 75 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §2A player will turn into PICKLE RICK!!!"}]}
 execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 76 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §bSomeone will become baby yoda"}]}
 execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 77 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §5§l§oThanos snaps his fingers!!!!"}]}
 execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 78 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §6When the atoms perfectly align"}]}
-execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 79 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §bSomebody will make snowballs"}]}
+execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 79 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §bAn umbrella shop is opening up"}]}
 execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 80 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §b§lLast one to leave the circle wins 100 coins"}]}
 execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 81 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §aAcid rains from the sky!"}]}
 execute unless score "gamemode" game matches 1 if score "event randomizer" game matches 82 run tellraw @a {"rawtext":[{"text":"<§eGame§r> §b§l§oA blizzard is forming ❄! Take cover!"}]}
