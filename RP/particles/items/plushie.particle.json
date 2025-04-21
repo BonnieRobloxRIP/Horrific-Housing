@@ -4,8 +4,8 @@
 		"description": {
 			"identifier": "brr:plushie",
 			"basic_render_parameters": {
-				"material": "particles_alpha",
-				"texture": "textures/particle/player_particle"
+				"material": "particles_blend",
+				"texture": "textures/particle/glowing"
 			}
 		},
 		"components": {
@@ -37,8 +37,8 @@
 			},
 			"minecraft:particle_appearance_billboard": {
 				"size": [
-					0.05,
-					0.05
+					0.2,
+					0.2
 				],
 				"facing_camera_mode": "lookat_direction",
 				"uv": {
