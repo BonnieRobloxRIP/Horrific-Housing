@@ -222,6 +222,17 @@
 					"volume": 1
 				}
 			]
+		},
+		"music.game.gamemode.boss": {
+			"category": "music",
+			"sounds": [
+				{
+					"load_on_low_memory": false,
+					"name": "sounds/music/game/gamemode/boss",
+					"stream": true,
+					"volume": 1
+				}
+			]
 		}, // - Realms -
 		"music.game.realm.subspace": {
 			"category": "music",
@@ -273,6 +284,17 @@
 				{
 					"load_on_low_memory": false,
 					"name": "sounds/music/game/subspace/subspace_game03",
+					"stream": true,
+					"volume": 1
+				}
+			]
+		},
+		"music.game.subspace.game04": {
+			"category": "music",
+			"sounds": [
+				{
+					"load_on_low_memory": false,
+					"name": "sounds/music/game/subspace/subspace_game04",
 					"stream": true,
 					"volume": 1
 				}
@@ -451,7 +473,7 @@
 					"load_on_low_memory": true,
 					"name": "sounds/sfx/lobby/all_items_collected",
 					"stream": true,
-					"volume": 1
+					"volume": 3
 				}
 			]
 		},
@@ -462,7 +484,7 @@
 					"load_on_low_memory": true,
 					"name": "sounds/sfx/lobby/hes_released",
 					"stream": true,
-					"volume": 1
+					"volume": 3
 				}
 			]
 		},
@@ -473,7 +495,7 @@
 					"load_on_low_memory": true,
 					"name": "sounds/sfx/lobby/item_collected",
 					"stream": true,
-					"volume": 1
+					"volume": 3
 				}
 			]
 		},
@@ -484,7 +506,7 @@
 					"load_on_low_memory": true,
 					"name": "sounds/sfx/lobby/power_up",
 					"stream": true,
-					"volume": 1
+					"volume": 2
 				}
 			]
 		},
