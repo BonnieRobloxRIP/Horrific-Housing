@@ -60,7 +60,7 @@ function lobby_functions/spleef
 function lobby_functions/parkour
 function lobby_functions/tags
 function lobby_functions/voting_signs
-execute if score "timer switch" game matches 1 run function game_functions/event_data
+execute if score "timer switch" game matches 1 run function game_functions/game_data
 # = store stuff =
 # transition
 scoreboard players add @a[tag=shop,scores={transition=1..39}] transition 1
