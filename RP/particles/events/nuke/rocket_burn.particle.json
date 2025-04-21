@@ -63,7 +63,9 @@
 					]
 				}
 			},
-			"minecraft:particle_motion_collision": {},
+			"minecraft:particle_motion_collision": {
+				"collision_radius": 0
+			},
 			"minecraft:particle_appearance_tinting": {
 				"color": {
 					"interpolant": "v.particle_age / v.particle_lifetime",
