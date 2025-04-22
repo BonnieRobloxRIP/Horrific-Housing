@@ -7,9 +7,9 @@ export const subspaceTripmineScript = {
                 const blockId = data.block.typeId
                 if (blockId === "brr:subspace_tripmine_block") {
                     let pos = data.block.location
-                    data.player.runCommandAsync(`summon brr:subspace_tripmine_entity ${pos.x} ${pos.y} ${pos.z}`)
-                    data.player.runCommandAsync(`setblock ${pos.x} ${pos.y} ${pos.z} air`)
-                    data.player.runCommandAsync(`title @a[tag=game] title §5§kSubspace Tripmine`)
+                    data.player.runCommand(`summon brr:subspace_tripmine_entity ${pos.x} ${pos.y} ${pos.z}`)
+                    data.player.runCommand(`setblock ${pos.x} ${pos.y} ${pos.z} air`)
+                    data.player.runCommand(`title @a[tag=game] title §5§kSubspace Tripmine`)
                 }
             });
 
@@ -18,12 +18,12 @@ export const subspaceTripmineScript = {
                 if (entityId === "brr:subspace_tripmine_entity") {
                     let pos = data.entity.location
                     system.runTimeout(() => {
-                        world.getDimension("overworld").runCommandAsync(`execute positioned ${pos.x} ${pos.y} ${pos.z} run playanimation @e[type=brr:subspace_tripmine_entity, r=0.5] explode`)
+                        world.getDimension("overworld").runCommand(`execute positioned ${pos.x} ${pos.y} ${pos.z} run playanimation @e[type=brr:subspace_tripmine_entity, r=0.5] explode`)
                         system.runTimeout(() => {
-                            world.getDimension("overworld").runCommandAsync(`execute positioned ${pos.x} ${pos.y} ${pos.z} run tag @a[r=12, tag=game, tag=!spectator, tag=!duel1, tag=!duel2] add subspace1`)
+                            world.getDimension("overworld").runCommand(`execute positioned ${pos.x} ${pos.y} ${pos.z} run tag @a[r=12, tag=game, tag=!spectator, tag=!duel1, tag=!duel2] add subspace1`)
                             system.runTimeout(() => {
-                                world.getDimension("overworld").runCommandAsync(`execute positioned ${pos.x} ${pos.y} ${pos.z} run tp @e[type=brr:subspace_tripmine_entity, r=1] 0 -10 0`)
-                                world.getDimension("overworld").runCommandAsync(`execute positioned 0 -10 0 run kill @e[type=brr:subspace_tripmine_entity, r=1]`)
+                                world.getDimension("overworld").runCommand(`execute positioned ${pos.x} ${pos.y} ${pos.z} run tp @e[type=brr:subspace_tripmine_entity, r=1] 0 -10 0`)
+                                world.getDimension("overworld").runCommand(`execute positioned 0 -10 0 run kill @e[type=brr:subspace_tripmine_entity, r=1]`)
                             }, 50);
                         }, 295);
                     }, 5);
