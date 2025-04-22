@@ -26,14 +26,14 @@ export const blockUseScript = {
                         if (data.block.typeId === "minecraft:carved_pumpkin") {
                             world.getDimension("overworld").playSound("fire.ignite", data.block.location);
                             const rot = data.block.permutation.getState("minecraft:cardinal_direction");
-                            data.player.runCommandAsync(
+                            data.player.runCommand(
                                 `setblock ${data.block.location.x} ${data.block.location.y} ${data.block.location.z} minecraft:lit_pumpkin["minecraft:cardinal_direction"="${rot}"]`
                             );
                         }
                         if (data.block.typeId === "minecraft:lit_pumpkin") {
                             world.getDimension("overworld").playSound("extinguish.candle", data.block.location);
                             const rot = data.block.permutation.getState("minecraft:cardinal_direction");
-                            data.player.runCommandAsync(
+                            data.player.runCommand(
                                 `setblock ${data.block.location.x} ${data.block.location.y} ${data.block.location.z} minecraft:carved_pumpkin["minecraft:cardinal_direction"="${rot}"]`
                             );
                         }
