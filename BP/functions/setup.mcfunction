@@ -32,7 +32,6 @@ scoreboard objectives add rotation dummy
 scoreboard objectives add plushies dummy
 scoreboard objectives add mountain dummy
 scoreboard objectives add equipped dummy
-scoreboard objectives add "nuke id" dummy
 scoreboard objectives add gamemodes dummy
 scoreboard objectives add flashbang dummy
 scoreboard objectives add life_link dummy
