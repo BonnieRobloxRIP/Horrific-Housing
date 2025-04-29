@@ -27,6 +27,6 @@ execute if score nuke game matches 6.. run scoreboard players set nuke game 0
 # nuke send
 execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=100..}] at @s run function events/nuke_properties/nuke_send
 # nuke receive
-execute as @s[type=brr:plate, tag=nuked] at @s run function events/nuke_properties/nuke_send
+execute as @s[type=brr:plate, scores={"nuke switch"=-2}] at @s run function events/nuke_properties/nuke_send
 # end
-execute as @s[type=brr:plate, tag=nuked, scores={nuke=150..}] at @s run kill @s
+execute as @s[type=brr:plate, scores={"nuke switch"=-2, nuke=150..}] at @s run kill @s
