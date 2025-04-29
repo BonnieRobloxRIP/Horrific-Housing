@@ -54,6 +54,7 @@ scoreboard players set blackhole1 subspace 1
 scoreboard players set blasttime gamemodes 90
 scoreboard players set blasttimer gamemodes 1
 scoreboard players set spleef gamemodes 2400
+scoreboard players set nuke game 0
 scoreboard players set E1 events 0
 scoreboard players set E2 events 0
 scoreboard players set E3 events 0
