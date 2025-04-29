@@ -4,7 +4,20 @@ execute as @s[type=brr:plate, scores={"nuke switch"=1}] at @s run scoreboard pla
 execute as @s[type=brr:plate, scores={nuke=1}] at @s run playsound particle.alarm9 @a
 execute as @s[type=brr:plate, scores={"nuke switch"=-1}] at @s run particle brr:warning ^ ^ ^
 # target finder
-execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s run scoreboard players operation @r[type=brr:plate, tag=!ufo, tag=!meteor, tag=!train2, tag=!nuked, tag=!subportal, name=!subspace, name=!blackhole, name=!inv, name=!beans, name=!sweeper, scores={"nuke switch"=0}] "nuke id" = @s "nuke id"
+execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s if score nuke game matches 0 run tag @s add nuke1
+execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s if score nuke game matches 0 run tag @r[type=brr:plate, tag=!nuke1, tag=!nuke2, tag=!nuke3, tag=!nuke4, tag=!nuke5, tag=!nuke6, scores={"nuke switch"=0}] add nuke1
+execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s if score nuke game matches 1 run tag @s add nuke2
+execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s if score nuke game matches 1 run tag @r[type=brr:plate, tag=!nuke1, tag=!nuke2, tag=!nuke3, tag=!nuke4, tag=!nuke5, tag=!nuke6, scores={"nuke switch"=0}] add nuke2
+execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s if score nuke game matches 2 run tag @s add nuke3
+execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s if score nuke game matches 2 run tag @r[type=brr:plate, tag=!nuke1, tag=!nuke2, tag=!nuke3, tag=!nuke4, tag=!nuke5, tag=!nuke6, scores={"nuke switch"=0}] add nuke3
+execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s if score nuke game matches 3 run tag @s add nuke4
+execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s if score nuke game matches 3 run tag @r[type=brr:plate, tag=!nuke1, tag=!nuke2, tag=!nuke3, tag=!nuke4, tag=!nuke5, tag=!nuke6, scores={"nuke switch"=0}] add nuke4
+execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s if score nuke game matches 4 run tag @s add nuke5
+execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s if score nuke game matches 4 run tag @r[type=brr:plate, tag=!nuke1, tag=!nuke2, tag=!nuke3, tag=!nuke4, tag=!nuke5, tag=!nuke6, scores={"nuke switch"=0}] add nuke5
+execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s if score nuke game matches 5 run tag @s add nuke6
+execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s if score nuke game matches 5 run tag @r[type=brr:plate, tag=!nuke1, tag=!nuke2, tag=!nuke3, tag=!nuke4, tag=!nuke5, tag=!nuke6, scores={"nuke switch"=0}] add nuke6
+execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s run scoreboard players add nuke game 1
+execute if score nuke game matches 6.. run scoreboard players set nuke game 0
 # nuke send
 execute as @s[type=brr:plate, scores={"nuke switch"=1, nuke=100..}] at @s run function events/nuke_properties/nuke_send
 # nuke receive
