@@ -63,12 +63,11 @@ execute as @a[tag=game, tag=flashbang] at @s run function events/functionality/f
 # train
 execute as @e[type=brr:plate, scores={"train switch"=1}] at @s run function events/functionality/train
 # nuke
-execute as @e[type=brr:plate, scores={rotation=0}] at @s if block ^1 ^6 ^3 stone_button["facing_direction"=4, "button_pressed_bit"=true] run scoreboard players random @s "nuke id" 1 1000000
-execute as @e[type=brr:plate, scores={rotation=1}] at @s if block ^1 ^6 ^3 stone_button["facing_direction"=2, "button_pressed_bit"=true] run scoreboard players random @s "nuke id" 1 1000000
-execute as @e[type=brr:plate, scores={rotation=2}] at @s if block ^1 ^6 ^3 stone_button["facing_direction"=5, "button_pressed_bit"=true] run scoreboard players random @s "nuke id" 1 1000000
-execute as @e[type=brr:plate, scores={rotation=3}] at @s if block ^1 ^6 ^3 stone_button["facing_direction"=3, "button_pressed_bit"=true] run scoreboard players random @s "nuke id" 1 1000000
-execute as @e[type=brr:plate, scores={"nuke id"=1..}] at @s if block ^1 ^6 ^3 stone_button run scoreboard players set @s "nuke switch" 1
-execute as @e[type=brr:plate, scores={"nuke id"=1..}] at @s if block ^1 ^6 ^3 stone_button run setblock ^1 ^6 ^3 air
-execute as @e[type=brr:plate, scores={"nuke id"=1..}] at @s run function events/functionality/nuke
+execute as @e[type=brr:plate, scores={rotation=0}] at @s if block ^1 ^6 ^3 stone_button["facing_direction"=4, "button_pressed_bit"=true] run scoreboard players set @s "nuke switch" 1
+execute as @e[type=brr:plate, scores={rotation=1}] at @s if block ^1 ^6 ^3 stone_button["facing_direction"=2, "button_pressed_bit"=true] run scoreboard players set @s "nuke switch" 1
+execute as @e[type=brr:plate, scores={rotation=2}] at @s if block ^1 ^6 ^3 stone_button["facing_direction"=5, "button_pressed_bit"=true] run scoreboard players set @s "nuke switch" 1
+execute as @e[type=brr:plate, scores={rotation=3}] at @s if block ^1 ^6 ^3 stone_button["facing_direction"=3, "button_pressed_bit"=true] run scoreboard players set @s "nuke switch" 1
+execute as @e[type=brr:plate, scores={"nuke switch"=1}] at @s if block ^1 ^6 ^3 stone_button run setblock ^1 ^6 ^3 air
+function events/functionality/nuke
 # lightbulb
 execute as @a[tag=game, tag=lightbulb] at @s run function events/functionality/light_bulb
