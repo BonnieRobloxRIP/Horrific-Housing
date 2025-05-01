@@ -1,5 +1,5 @@
 # value setting
-execute as @r[type=brr:plate, tag=!ufo, tag=!meteor, tag=!train2, tag=!nuked, tag=!subportal, name=!subspace, name=!blackhole, name=!inv, name=!beans, name=!sweeper] at @s run tag @s add nuke1
+execute as @r[type=brr:plate, tag=!ufo, tag=!meteor, tag=!train2, tag=!nuked, tag=!subportal, name=!subspace, name=!blackhole, name=!inv, name=!beans, name=!sweeper, scores={"nuke switch"=0}] at @s run tag @s add nuke1
 # house default rotation
 execute as @e[type=brr:plate, tag=nuke1, scores={rotation=0}] at @s run structure load E49M1 ~1 ~ ~2 
 # house 90_rotation
