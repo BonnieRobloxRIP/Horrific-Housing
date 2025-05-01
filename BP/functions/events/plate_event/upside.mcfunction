@@ -12,8 +12,9 @@ execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=6
 execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=7}] at @s run structure load E0M0 ~-4 ~ ~-4
 execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=7}] at @s run structure load E31M1a ~-4 ~-29 ~-4
 execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=9}] at @s run structure load E40M1a ~-2 ~-33 ~-2 
-execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=10}] at @s run structure load E42M1a ~-2 ~-33 ~-2 
-execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=11}] at @s run structure load E50M1a ~-2 ~-33 ~-2 
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=10}] at @s run structure load E41M1a ~-4 ~-15 ~-4
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=11}] at @s run structure load E42M1a ~-2 ~-33 ~-2 
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=12}] at @s run structure load E50M1a ~-2 ~-33 ~-2 
 execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "security wall"=1}] at @s run structure load E0M0 ~-4 ~ ~-4
 execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "security wall"=1}] at @s run structure load E8M1a ~-3 ~-13 ~-3
 # 90_degrees rotation
@@ -26,9 +27,10 @@ execute as @e[type=brr:plate, tag=upside, scores={rotation=1, "event building"=3
 execute as @e[type=brr:plate, tag=upside, scores={rotation=1, "event building"=6}] at @s run structure load E24M1a ~-3 ~-33 ~-2 90_degrees
 execute as @e[type=brr:plate, tag=upside, scores={rotation=1, "event building"=7}] at @s run structure load E0M0 ~-5 ~ ~-4 90_degrees
 execute as @e[type=brr:plate, tag=upside, scores={rotation=1, "event building"=7}] at @s run structure load E31M1a ~-5 ~-29 ~-4 90_degrees
-execute as @e[type=brr:plate, tag=upside, scores={rotation=1, "event building"=9}] at @s run structure load E40M1a ~-3 ~-33 ~-2 90_degrees
-execute as @e[type=brr:plate, tag=upside, scores={rotation=1, "event building"=10}] at @s run structure load E42M1a ~-3 ~-33 ~-2 90_degrees
-execute as @e[type=brr:plate, tag=upside, scores={rotation=1, "event building"=11}] at @s run structure load E50M1a ~-3 ~-33 ~-2 90_degrees
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=9}] at @s run structure load E40M1a ~-3 ~-33 ~-2 90_degrees
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=10}] at @s run structure load E41M1a ~-5 ~-15 ~-4 90_degrees
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=11}] at @s run structure load E42M1a ~-3 ~-33 ~-2 90_degrees
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=12}] at @s run structure load E50M1a ~-3 ~-33 ~-2 90_degrees
 execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "security wall"=1}] at @s run structure load E0M0 ~-5 ~ ~-4 90_degrees
 execute as @e[type=brr:plate, tag=upside, scores={rotation=1, "security wall"=1}] at @s run structure load E8M1a ~-4 ~-13 ~-3 90_degrees
 # 180_degrees rotation
@@ -41,9 +43,10 @@ execute as @e[type=brr:plate, tag=upside, scores={rotation=2, "event building"=3
 execute as @e[type=brr:plate, tag=upside, scores={rotation=2, "event building"=6}] at @s run structure load E24M1a ~-2 ~-33 ~-3 180_degrees
 execute as @e[type=brr:plate, tag=upside, scores={rotation=2, "event building"=7}] at @s run structure load E0M0 ~-4 ~ ~-5 180_degrees
 execute as @e[type=brr:plate, tag=upside, scores={rotation=2, "event building"=7}] at @s run structure load E31M1a ~-4 ~-29 ~-5 180_degrees
-execute as @e[type=brr:plate, tag=upside, scores={rotation=2, "event building"=9}] at @s run structure load E40M1a ~-2 ~-33 ~-3 180_degrees
-execute as @e[type=brr:plate, tag=upside, scores={rotation=2, "event building"=10}] at @s run structure load E42M1a ~-2 ~-33 ~-3 180_degrees
-execute as @e[type=brr:plate, tag=upside, scores={rotation=2, "event building"=11}] at @s run structure load E50M1a ~-2 ~-33 ~-3 180_degrees
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=9}] at @s run structure load E40M1a ~-2 ~-33 ~-3 180_degrees
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=10}] at @s run structure load E41M1a ~-4 ~-15 ~-5 180_degrees
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=11}] at @s run structure load E42M1a ~-2 ~-33 ~-3 180_degrees
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=12}] at @s run structure load E50M1a ~-2 ~-33 ~-3 180_degrees
 execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "security wall"=1}] at @s run structure load E0M0 ~-4 ~ ~-5 180_degrees
 execute as @e[type=brr:plate, tag=upside, scores={rotation=2, "security wall"=1}] at @s run structure load E8M1a ~-3 ~-13 ~-4 180_degrees
 # 270_degrees rotation
@@ -56,9 +59,10 @@ execute as @e[type=brr:plate, tag=upside, scores={rotation=3, "event building"=3
 execute as @e[type=brr:plate, tag=upside, scores={rotation=3, "event building"=6}] at @s run structure load E24M1a ~-2 ~-33 ~-2 270_degrees
 execute as @e[type=brr:plate, tag=upside, scores={rotation=3, "event building"=7}] at @s run structure load E0M0 ~-4 ~ ~-4 270_degrees
 execute as @e[type=brr:plate, tag=upside, scores={rotation=3, "event building"=7}] at @s run structure load E31M1a ~-4 ~-29 ~-4 270_degrees
-execute as @e[type=brr:plate, tag=upside, scores={rotation=3, "event building"=9}] at @s run structure load E40M1a ~-2 ~-33 ~-2 270_degrees
-execute as @e[type=brr:plate, tag=upside, scores={rotation=3, "event building"=10}] at @s run structure load E42M1a ~-2 ~-33 ~-2 270_degrees
-execute as @e[type=brr:plate, tag=upside, scores={rotation=3, "event building"=11}] at @s run structure load E50M1a ~-2 ~-33 ~-2 270_degrees
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=9}] at @s run structure load E40M1a ~-2 ~-33 ~-2 270_degrees
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=10}] at @s run structure load E41M1a ~-4 ~-15 ~-4 270_degrees
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=11}] at @s run structure load E42M1a ~-2 ~-33 ~-2 270_degrees
+execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "event building"=12}] at @s run structure load E50M1a ~-2 ~-33 ~-2 270_degrees
 execute as @e[type=brr:plate, tag=upside, scores={rotation=0, "security wall"=1}] at @s run structure load E0M0 ~-4 ~ ~-4 270_degrees
 execute as @e[type=brr:plate, tag=upside, scores={rotation=3, "security wall"=1}] at @s run structure load E8M1a ~-3 ~-13 ~-3 270_degrees
 # colors 
