@@ -2,7 +2,9 @@
 execute as @e[type=brr:plate, scores={"nuke switch"=1}] at @s run scoreboard players add @s nuke 1
 # effects/particles
 execute as @e[type=brr:plate, scores={nuke=1}] at @s run playsound particle.alarm9 @a
+execute as @e[type=brr:plate, scores={nuke=80..100}] at @s run particle brr:rocket_burn_03 ^2 ^0 ^3
 execute as @e[type=brr:plate, scores={nuke=100}] at @s run playsound particle.alarm9 @a
+execute as @e[type=brr:plate, scores={nuke=100}] at @s run playsound sfx.events.nuke.nuke @a
 execute as @e[type=brr:plate, scores={"nuke switch"=-1}] at @s run particle brr:warning ^ ^ ^
 # target finder
 execute as @e[type=brr:plate, scores={"nuke switch"=1, nuke=1}] at @s if score nuke game matches 0 run tag @s add nuke1
