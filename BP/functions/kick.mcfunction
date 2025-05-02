@@ -36,7 +36,7 @@ kick BraydenRayden "banned for being toxic, unreasonably aggressive and sending 
 kick BraydenRayden "banned for being unserious and overall annoying"
 kick NotSneakyXD "banned for exploiting"
 kick Zac10284 "banned for server bombing"
-kick TensiveYT "banned from any BRR produced experience"
+#kick TensiveYT "banned from any BRR produced experience"
 kick jackb779 "banned for exploiting"
 kick "K3V0101" "banned for referencing nsfw"
 #kick SMlestops5836 "banned for exploiting"
