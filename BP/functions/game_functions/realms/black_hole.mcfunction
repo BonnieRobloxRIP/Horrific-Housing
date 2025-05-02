@@ -2,6 +2,7 @@
 execute as @a[tag=blackhole1] at @s run camerashake add @s 0.6 2 positional
 execute as @a[tag=blackhole1] at @s run camera @s fade time 0 0 5 color 40 0 255
 execute as @a[tag=blackhole1] at @s run title @s title §9§lRUN
+execute as @a[tag=blackhole1] at @s run effect @s clear
 execute as @a[tag=blackhole1] at @s run stopsound @s music.event.tacos
 execute as @a[tag=blackhole1] at @s run stopsound @s sfx.game.homedesign
 # summon subspace
