@@ -34,6 +34,7 @@ execute as @e[type=brr:plate, name=subspace] at @s positioned ~-3 ~35 ~6 if bloc
 execute as @e[type=brr:plate, name=subspace] at @s positioned ~-3 ~35 ~6 if block ~ ~ ~ stone_button["button_pressed_bit"=true, "facing_direction"=1] run title @p[tag=subspace] subtitle §dYou were rewarded: §e50 Coins §dfor escaping!
 execute as @e[type=brr:plate, name=subspace] at @s positioned ~-3 ~35 ~6 if block ~ ~ ~ stone_button["button_pressed_bit"=true, "facing_direction"=1] run title @p[tag=subspace] title §5§lWell Done
 execute as @e[type=brr:plate, name=subspace] at @s positioned ~-3 ~35 ~6 if block ~ ~ ~ stone_button["button_pressed_bit"=true, "facing_direction"=1] run playsound aliens.arrive @a
+execute as @e[type=brr:plate, name=subspace] at @s positioned ~-3 ~35 ~6 if block ~ ~ ~ stone_button["button_pressed_bit"=true, "facing_direction"=1] run camerashake stop @s
 execute as @e[type=brr:plate, name=subspace] at @s positioned ~-3 ~35 ~6 if block ~ ~ ~ stone_button["button_pressed_bit"=true, "facing_direction"=1] run tag @p[tag=subspace] remove subspace
 execute as @e[type=brr:plate, name=subspace] at @s positioned ~-3 ~35 ~6 if block ~ ~ ~ stone_button["button_pressed_bit"=true, "facing_direction"=1] run tp @p @r[c=1, type=brr:plate, name=!subspace, name=!blackhole, name=!inv]
 execute as @e[type=brr:plate, name=subspace] at @s positioned ~-3 ~35 ~6 if block ~ ~ ~ stone_button["button_pressed_bit"=true, "facing_direction"=1] run setblock ~ ~ ~ stone_button["button_pressed_bit"=false, "facing_direction"=1]
