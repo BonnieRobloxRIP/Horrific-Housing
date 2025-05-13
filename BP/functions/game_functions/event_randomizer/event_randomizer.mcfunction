@@ -1,4 +1,4 @@
-execute if score "event randomizer" game matches 0 run scoreboard players random "event randomizer" game 1 50
+execute if score "event randomizer" game matches 0 run scoreboard players random "event randomizer" game 1 52
 execute if score "event randomizer" game matches 1 if score "E1" events matches 1 run scoreboard players set "event randomizer" game 0
 execute if score "event randomizer" game matches 2 if score "E2" events matches 1 run scoreboard players set "event randomizer" game 0
 execute if score "event randomizer" game matches 3 if score "E3" events matches 1 run scoreboard players set "event randomizer" game 0
