@@ -26,8 +26,8 @@ scoreboard objectives add border dummy
 scoreboard objectives add upside dummy
 scoreboard objectives add events dummy
 scoreboard objectives add icicle dummy
+scoreboard objectives add realms dummy
 scoreboard objectives add 1minute dummy
-scoreboard objectives add subspace dummy
 scoreboard objectives add rotation dummy
 scoreboard objectives add plushies dummy
 scoreboard objectives add mountain dummy
@@ -65,6 +65,7 @@ scoreboard players set skin lobby 0
 scoreboard players set lever lobby 0
 scoreboard players set players game 0
 scoreboard players set gamemode game 0
+scoreboard players set subspace game 0
 tp @a 0 2 -1
 function game_functions/reset
 tag @s add host
