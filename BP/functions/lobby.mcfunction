@@ -69,6 +69,8 @@ execute as @a[tag=!shop,scores={transition=1}] at @s run camera @s clear
 # scoreboards
 execute as @a at @s run scoreboard players operation @s coins = @s coins_storage
 execute as @a at @s run scoreboard players operation @s wins = @s win_storage
+scoreboard players set preview shop 0
+execute as @a[tag=shop] at @s run scoreboard players add preview shop 1
 # functions
 function store_functions/clearing
 execute as @a[tag=color] at @s run function store_functions/store_color
@@ -105,6 +107,7 @@ execute as @a[tag=host3, hasitem={item=brr:bonnie_plush, location=slot.weapon.ma
 execute as @a[tag=lobby, tag=!host] at @s run stopsound @s music.game.subspace.game
 execute as @a[tag=lobby, tag=!host] at @s run stopsound @s music.game.subspace.game02
 execute as @a[tag=lobby, tag=!host] at @s run stopsound @s music.game.subspace.game03
+execute as @a[tag=lobby, tag=!host] at @s run stopsound @s music.game.subspace.game04
 # = skins =
 execute if score skin lobby matches 3 run fog @a pop subspace
 execute if score skin lobby matches 3 run fog @a pop halloween
