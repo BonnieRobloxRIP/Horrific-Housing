@@ -65,7 +65,8 @@ scoreboard players set skin lobby 0
 scoreboard players set lever lobby 0
 scoreboard players set players game 0
 scoreboard players set gamemode game 0
-scoreboard players set subspace game 0
+scoreboard players set subspace lobby 0
+scoreboard players set "event randomizer" game 0
 tp @a 0 2 -1
 function game_functions/reset
 tag @s add host
@@ -109,3 +110,6 @@ scoreboard objectives add tag_og dummy
 scoreboard objectives add tag_winner dummy
 scoreboard objectives add tag_bunny dummy
 scoreboard objectives add tag_cat dummy
+
+tickingarea add -34 -32 8 34 32 72 game true
+tickingarea add 80 0 24 110 64 60 realms true
