@@ -10,7 +10,7 @@ scoreboard objectives remove wins
 scoreboard objectives remove nap
 scoreboard objectives remove events
 scoreboard objectives remove potion
-scoreboard objectives remove subspace
+scoreboard objectives remove realms
 scoreboard objectives remove duel
 scoreboard objectives remove flashbang
 scoreboard objectives remove vote
@@ -27,7 +27,7 @@ scoreboard objectives add wins dummy "§b§l Wins "
 scoreboard objectives add nap dummy
 scoreboard objectives add events dummy
 scoreboard objectives add potion dummy
-scoreboard objectives add subspace dummy
+scoreboard objectives add realms dummy
 scoreboard objectives add duel dummy
 scoreboard objectives add flashbang dummy
 scoreboard objectives add vote dummy
@@ -47,12 +47,12 @@ scoreboard players set timer game 50
 scoreboard players set singleplayer game 1
 scoreboard players set "darkness switch" global 0
 scoreboard players set darkness global 0
-scoreboard players set subspace subspace 0
-scoreboard players set subspace1 subspace 1
-scoreboard players set blackhole subspace 0
-scoreboard players set blackhole1 subspace 1
+scoreboard players set subspace realms 0
+scoreboard players set subspace1 realms 5
+scoreboard players set blackhole realms 0
+scoreboard players set blackhole1 realms 5
 scoreboard players set blasttime gamemodes 90
-scoreboard players set blasttimer gamemodes 1
+scoreboard players set blasttimer gamemodes 5
 scoreboard players set spleef gamemodes 2400
 scoreboard players set nuke game 0
 scoreboard players set E1 events 0
@@ -158,6 +158,8 @@ scoreboard players set E100 events 0
 # = game area =
 # structures
 execute as @e[type=brr:plate, name=!subspace, name=!blackhole] at @s run structure load E0M0 ~-4 ~-31 ~-4 0_degrees none block_by_block 10
+execute as @e[type=brr:plate, tag=train1] at @s run structure load E46M1d ~-64 ~-2 ~-4 
+execute as @e[type=brr:plate, tag=train1] at @s run structure load E46M1d ~ ~-2 ~-4 
 execute as @e[type=brr:plate, name=subspace] at @s run structure load subspaced ~-8 ~1 ~-8
 execute as @e[type=brr:plate, name=blackhole] at @s run structure load blackholed ~-6 ~1 ~-6
 execute unless score gamemode game matches 9 run structure load delete -32 -64 8 0_degrees none block_by_block 10
@@ -192,6 +194,7 @@ gamerule mobgriefing false
 gamerule spawnradius 0
 gamerule recipesunlock false
 difficulty peaceful
+# the time of day based on the skin of the lobby
 execute if score skin lobby matches 0 run time set 1000
 execute if score skin lobby matches 1 run time set 13500
 execute if score skin lobby matches 2 run time set 13000
@@ -216,27 +219,6 @@ tp @a[tag=spectator] 0 1 -1
 scoreboard players add gm1 vote 0
 scoreboard players add gm2 vote 0
 scoreboard players add gm3 vote 0
-# - shop -
-structure load E0M0 47 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 57 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 67 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 77 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 87 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 97 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 107 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 117 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 127 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 137 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 147 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 157 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 167 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 177 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 187 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 197 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 207 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 217 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 227 -10 -39 0_degrees none block_by_block 2
-structure load E0M0 237 -10 -39 0_degrees none block_by_block 2
 # - elevator -
 execute if score "elevator position" lobby matches 1 run scoreboard players set "elevator direction" lobby 1
 execute if score "elevator position" lobby matches 1 run scoreboard players set "elevator switch" lobby 1
