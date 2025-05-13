@@ -83,6 +83,7 @@ execute as @a[tag=lobby] at @s if block ~ ~-2 ~ brr:spawn run tag @s remove targ
 execute as @a[tag=lobby] at @s if block ~ ~-2 ~ brr:spawn run tag @s remove target19
 execute as @a[tag=lobby] at @s if block ~ ~-2 ~ brr:spawn run tag @s remove target20
 execute as @a[tag=lobby] at @s if block ~ ~-2 ~ brr:spawn run tag @s remove target21
+execute as @a[tag=lobby] at @s if block ~ ~-2 ~ brr:spawn run tag @s remove invisible
 
 execute as @a[tag=lobby] at @s if block ~ ~-2 ~ brr:spawn run tag @s remove lightbulb
 
