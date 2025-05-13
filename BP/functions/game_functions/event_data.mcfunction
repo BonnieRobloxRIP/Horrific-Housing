@@ -69,5 +69,9 @@ execute as @e[type=brr:plate, scores={rotation=2}] at @s if block ^1 ^6 ^3 stone
 execute as @e[type=brr:plate, scores={rotation=3}] at @s if block ^1 ^6 ^3 stone_button["facing_direction"=3, "button_pressed_bit"=true] run scoreboard players set @s "nuke switch" 1
 execute as @e[type=brr:plate, scores={"nuke switch"=1}] at @s if block ^1 ^6 ^3 stone_button run setblock ^1 ^6 ^3 air
 function events/functionality/nuke
+# assassin
+execute as @r[tag=assassin] at @s run function events/functionality/assassin
+# invisibility
+execute as @a[tag=invisible] at @s run effect @s invisibility 1 255 false
 # lightbulb
 execute as @a[tag=game, tag=lightbulb] at @s run function events/functionality/light_bulb
