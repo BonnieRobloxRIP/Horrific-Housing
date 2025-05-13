@@ -101,7 +101,9 @@ execute if score "event randomizer" game matches 49 run function events/plate_ev
 
 execute if score "event randomizer" game matches 50 run function events/plate_event/lil_john
 
+execute if score "event randomizer" game matches 51 run function events/player_event/assassin
 
+execute if score "event randomizer" game matches 52 run tag @r[tag=game, tag=!invisible] add invisible
 
 execute if score "event randomizer" game matches 91 run tag @r[tag=game, tag=!lightbulb] add lightbulb
 
