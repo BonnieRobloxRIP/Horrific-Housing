@@ -1,13 +1,5 @@
 {
 	"values": [
-		"lobby",
-		"shit",
-		"kick",
-		"death",
-		"voting",
-		"game_functions/realms/subspace",
-		"game_functions/realms/black_hole",
-		"store_functions/particles",
-		"store_functions/scores"
+		"shit"
 	]
 }
