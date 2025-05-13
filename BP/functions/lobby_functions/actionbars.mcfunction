@@ -40,6 +40,18 @@ execute as @a[tag=subspace, tag=1minute] at @s if score subspace realms matches 
 execute as @a[tag=subspace, tag=1minute] at @s if score subspace realms matches 1 unless score gamemode game matches 1 run titleraw @s actionbar {"rawtext":[{"text": "§5DIE"}]}
 # normal with 1 minute, black hole
 execute as @a[tag=blackhole, tag=1minute] at @s unless score gamemode game matches 1 run titleraw @s actionbar {"rawtext":[{"text": "§9You are going to be consumed in: §l"}, {"score":{"name":"blackhole","objective":"realms"}}, {"text": " Seconds \n§r    "}, {"text": "§cYou are going to explode in: §l§6"}, {"score":{"name":"@s","objective":"1minute"}}, {"text": " §r§3Seconds.\n§a§l                 "},   {"score":{"name":"players","objective":"game"}}, {"text": " §r§bPlayers left"}]}
+# normal with assassin
+
+# normal with 1 minute and assassin
+
+# normal in subspace with assassin
+
+# normal in subspace with 1 minute and assassin
+
+# normal in black hole with assassin
+
+# normal in black hole with 1 minute and assassin
+
 # - blast -
 execute as @a[tag=!spectator, tag=!1minute, tag=!subspace, tag=!blackhole] at @s unless block ~ ~-2 ~ brr:spawn if score players game matches 1.. if score gamemode game matches 1 run titleraw @s actionbar {"rawtext":[{"text": "§e§l "}, {"score":{"name":"blasttime","objective":"gamemodes"}}, {"text": " §r§6Seconds Remain\n§a§l"}, {"text": " "},  {"score":{"name":"players","objective":"game"}}, {"text": " §r§bPlayers left"}]}
 # blast with 1 minute
@@ -48,6 +60,18 @@ execute as @a[tag=1minute, scores={1minute=1..}] at @s if score players game mat
 
 # blast in black hole
 execute as @a[tag=game, tag=blackhole] at @s if score gamemode game matches 1 run titleraw @s actionbar {"rawtext":[{"text": "§9You will be consumed in: §9§l"}, {"score":{"name":"blackhole", "objective": "subspace"}}, {"text": " §r§9Seconds \n§r§e§l          "}, {"score":{"name":"blasttime","objective":"gamemodes"}}, {"text": " §r§6Seconds Remain\n§a§l             "}, {"score":{"name":"players","objective":"game"}}, {"text": " §r§bPlayers left"}]}
+# blast with assassin
+
+# blast with 1 minute and assassin
+
+# blast in subspace with assassin
+
+# blast in subspace with 1 minute and assassin
+
+# blast in black hole with assassin
+
+# blast in black hole with 1 minute and assassin
+
 # blast with 1 minute, subspace
 
 # blast with 1 minute, black hole
