@@ -18,6 +18,8 @@ execute as @a[scores={alive=0}, tag=game, tag=house9] at @s if score gamemode ga
 execute as @a[scores={alive=0}, tag=game, tag=house10] at @s if score gamemode game matches 8 run scoreboard players add @e[type=brr:plate, tag=plate10] vanish 1
 execute as @a[scores={alive=0}, tag=game, tag=house11] at @s if score gamemode game matches 8 run scoreboard players add @e[type=brr:plate, tag=plate11] vanish 1
 execute as @a[scores={alive=0}, tag=game, tag=house12] at @s if score gamemode game matches 8 run scoreboard players add @e[type=brr:plate, tag=plate12] vanish 1
+execute as @a[scores={alive=0}, tag=game, tag=target] at @s run function events/functionality/assassin
+execute as @a[scores={alive=0}, tag=game, tag=assassin] at @s run function events/functionality/assassin
 execute as @a[scores={alive=0}, tag=game] at @s run scoreboard players remove players game 1
 execute as @a[scores={alive=0}, tag=game] at @s run scoreboard players random @s dm 1 257
 execute as @a[scores={alive=0}, tag=game] at @s if score @s dm matches 1 run tellraw @a {"rawtext":[{"text": "§4"}, {"selector": "@s"}, {"text":" is #2"}]}
