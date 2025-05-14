@@ -21,7 +21,7 @@ execute as @a[tag=assassin1] at @s if entity @a[tag=assassin, scores={assassin=1
 execute as @a[tag=assassin1] at @s if entity @a[tag=assassin, scores={assassin=18}] run scoreboard players set @s assassin 19
 execute as @a[tag=assassin1] at @s if entity @a[tag=assassin, scores={assassin=19}] run scoreboard players set @s assassin 20
 execute as @a[tag=assassin1] at @s if entity @a[tag=assassin, scores={assassin=20}] run scoreboard players set @s assassin 21
-execute as @r[tag=game, tag=!target, tag=!assassin] at @s run tag @s add targetA
+execute as @r[tag=game, tag=!target, tag=!assassin, tag=!assassin1] at @s run tag @s add targetA
 execute as @a[tag=game, tag=targetA] at @s if entity @a[tag=assassin1, scores={assassin=1}] run tag @s add target1
 execute as @a[tag=game, tag=targetA] at @s if entity @a[tag=assassin1, scores={assassin=2}] run tag @s add target2
 execute as @a[tag=game, tag=targetA] at @s if entity @a[tag=assassin1, scores={assassin=3}] run tag @s add target3
