@@ -60,6 +60,7 @@ function lobby_functions/spleef
 function lobby_functions/parkour
 function lobby_functions/tags
 function lobby_functions/voting_signs
+function lobby_functions/lab
 execute if score "timer switch" game matches 1 run function game_functions/game_data
 # = store stuff =
 # transition
