@@ -36,3 +36,14 @@ execute as @a[hasitem={item=brr:marshmallow997_plush}, x=2, y=-16, z=-10, dx=7, 
 execute as @a[hasitem={item=brr:bonnie_plush}, x=2, y=-16, z=-10, dx=7, dy=5, dz=9] at @s if score item2 subspace matches 1 run clear @s brr:bonnie_plush 1
 execute as @a[hasitem={item=brr:subspace_tripmine_block}, x=2, y=-16, z=-10, dx=7, dy=5, dz=9] at @s if score item3 subspace matches 1 run clear @s brr:subspace_tripmine_block 1
 execute as @a[hasitem={item=brr:his_hand}, x=2, y=-16, z=-10, dx=7, dy=5, dz=9] at @s if score item4 subspace matches 1 run clear @s brr:his_hand 1 
+# total items
+execute if score item1 subspace matches 1 run scoreboard players add "all items" subspace 1
+execute if score item2 subspace matches 1 run scoreboard players add "all items" subspace 1
+execute if score item3 subspace matches 1 run scoreboard players add "all items" subspace 1
+execute if score item4 subspace matches 1 run scoreboard players add "all items" subspace 1
+# run if all items placed
+execute if score "all items" subspace matches 4 if score items subspace matches 0 run tellraw @a {"rawtext":[{"text": "§5§lALL ITEMS PLACED"}]}
+execute if score "all items" subspace matches 4 if score items subspace matches 0 run playsound sfx.lobby.all_items_collected @a
+execute if score "all items" subspace matches 4 run scoreboard players set items subspace 1
+# end
+scoreboard players reset "all items" subspace
