@@ -28,10 +28,12 @@ scoreboard objectives add events dummy
 scoreboard objectives add icicle dummy
 scoreboard objectives add realms dummy
 scoreboard objectives add 1minute dummy
+scoreboard objectives add subspace dummy
 scoreboard objectives add rotation dummy
 scoreboard objectives add plushies dummy
 scoreboard objectives add mountain dummy
 scoreboard objectives add equipped dummy
+scoreboard objectives add assassin dummy
 scoreboard objectives add gamemodes dummy
 scoreboard objectives add flashbang dummy
 scoreboard objectives add life_link dummy
@@ -57,6 +59,7 @@ scoreboard objectives add "meteor switch" dummy
 scoreboard objectives add "icicle switch" dummy
 scoreboard objectives add "train movement" dummy
 scoreboard objectives add "event building" dummy
+scoreboard objectives add "assassin timer" dummy
 scoreboard objectives add "mountain switch" dummy
 scoreboard objectives add "flood button switch" dummy
 
@@ -67,6 +70,11 @@ scoreboard players set players game 0
 scoreboard players set gamemode game 0
 scoreboard players set subspace lobby 0
 scoreboard players set "event randomizer" game 0
+scoreboard players set item1 subspace 0
+scoreboard players set item2 subspace 0
+scoreboard players set item3 subspace 0
+scoreboard players set item4 subspace 0
+
 tp @a 0 2 -1
 function game_functions/reset
 tag @s add host
