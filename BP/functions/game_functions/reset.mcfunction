@@ -225,6 +225,11 @@ execute if score "elevator position" lobby matches 1 run scoreboard players set 
 execute if score "elevator position" lobby matches 1 run setblock -9 1 -2 air
 execute if score "elevator position" lobby matches 1 run setblock -6 -15 -5 air
 execute if score "elevator position" lobby matches 1 run setblock -9 1 -5 air
+# - lab -
+execute if score item1 subspace matches 1 run structure load L2 5 -16 -9
+execute if score item2 subspace matches 1 run structure load L2a 7 -16 -9
+execute if score item3 subspace matches 1 run structure load L2b 7 -16 -4
+execute if score item4 subspace matches 1 run structure load L2c 5 -16 -4
 # = ending =
 scoreboard players set gamemode game 0
 scoreboard players set players game -2
