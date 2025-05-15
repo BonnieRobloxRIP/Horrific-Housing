@@ -16,3 +16,8 @@ clear @s
 scoreboard players set gamemode game 5
 function game_functions/game_setup/house_loader
 structure load event_data -5 5 6
+scoreboard players set item1 subspace 0
+scoreboard players set item2 subspace 0
+scoreboard players set item3 subspace 0
+scoreboard players set item4 subspace 0
+scoreboard players set items subspace 0
