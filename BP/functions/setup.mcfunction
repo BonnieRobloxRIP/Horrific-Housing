@@ -74,6 +74,7 @@ scoreboard players set item1 subspace 0
 scoreboard players set item2 subspace 0
 scoreboard players set item3 subspace 0
 scoreboard players set item4 subspace 0
+scoreboard players set items subspace 0
 
 tp @a 0 2 -1
 function game_functions/reset
