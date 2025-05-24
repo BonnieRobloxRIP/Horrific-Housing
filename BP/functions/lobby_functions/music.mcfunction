@@ -1,6 +1,6 @@
 # = scores =
 execute as @a[tag=lobby] at @s run scoreboard players remove @s music 1
-execute as @a[tag=game] at @s run scoreboard players remove @s music_game 1
+execute as @a[tag=game, tag=!subspace, tag=!blackhole] at @s run scoreboard players remove @s music_game 1
 execute as @a[tag=chill] at @s run scoreboard players remove @s chill 1
 execute as @a[tag=subspace] at @s run scoreboard players remove @s subspace 1
 execute as @a[tag=blackhole] at @s run scoreboard players remove @s "black hole" 1
@@ -16,6 +16,11 @@ execute as @a[tag=lobby, scores={music=..0}] at @s run stopsound @s music.lobby.
 execute as @a[tag=lobby, scores={music=..0}] at @s run stopsound @s music.lobby.calm_lobby
 execute as @a[tag=lobby, scores={music=..0}] at @s run stopsound @s music.lobby.christmas_lobby
 execute as @a[tag=lobby, scores={music=..0}] at @s run stopsound @s music.lobby.subspace
+execute as @a[tag=lobby, scores={music=..0}] at @s run stopsound @s music.lobby.conclusion
+execute as @a[tag=lobby, scores={music=..0}] at @s run stopsound @s music.lobby.conclusion02
+execute as @a[tag=lobby, scores={music=..0}] at @s run stopsound @s music.lobby.conclusion03
+execute as @a[tag=lobby, scores={music=..0}] at @s run stopsound @s music.lobby.conclusion04
+
 execute as @a[tag=game, scores={music_game=..0}] at @s run stopsound @s music.game.game
 execute as @a[tag=game, scores={music_game=..0}] at @s run stopsound @s music.game.game02
 execute as @a[tag=game, scores={music_game=..0}] at @s run stopsound @s music.game.game03
@@ -147,14 +152,14 @@ execute as @a[tag=!subspace] at @s run stopsound @s music.game.realm.subspace
 execute as @a[tag=!blackhole] at @s run stopsound @s music.game.realm.blackhole
 execute as @a[tag=!blast] at @s run stopsound @s music.game.gamemode.blast
 # - chill -
-execute as @a[tag=chill] at @s run scoreboard players reset music_game
+execute as @a[tag=chill] at @s run scoreboard players reset @s music_game
 execute as @a[tag=chill] at @s run stopsound @s music.game.game
 execute as @a[tag=chill] at @s run stopsound @s music.game.game02
 execute as @a[tag=chill] at @s run stopsound @s music.game.game03
 execute as @a[tag=chill] at @s run stopsound @s music.game.game04
 execute as @a[tag=chill] at @s run stopsound @s music.game.game05
 # - subspace tripmine realm -
-execute as @a[tag=subspace] at @s run scoreboard players reset music_game
+execute as @a[tag=subspace] at @s run scoreboard players reset @s music_game
 execute as @a[tag=subspace, tag=chill] at @s run scoreboard players reset chill
 execute as @a[tag=subspace] at @s run stopsound @s music.game.game
 execute as @a[tag=subspace] at @s run stopsound @s music.game.game02
@@ -163,7 +168,7 @@ execute as @a[tag=subspace] at @s run stopsound @s music.game.game04
 execute as @a[tag=subspace] at @s run stopsound @s music.game.game05
 execute as @a[tag=subspace] at @s run stopsound @s music.game.event.chill
 # - black hole realm -
-execute as @a[tag=blackhole] at @s run scoreboard players reset music_game
+execute as @a[tag=blackhole] at @s run scoreboard players reset @s music_game
 execute as @a[tag=blackhole, tag=chill] at @s run scoreboard players reset chill
 execute as @a[tag=blackhole] at @s run stopsound @s music.game.game
 execute as @a[tag=blackhole] at @s run stopsound @s music.game.game02
@@ -172,7 +177,7 @@ execute as @a[tag=blackhole] at @s run stopsound @s music.game.game04
 execute as @a[tag=blackhole] at @s run stopsound @s music.game.game05
 execute as @a[tag=blackhole] at @s run stopsound @s music.game.event.chill
 # - blast
-execute as @a[tag=blast] at @s run scoreboard players reset music_game
+execute as @a[tag=blast] at @s run scoreboard players reset @s music_game
 execute as @a[tag=blast] at @s run stopsound @s music.game.game
 execute as @a[tag=blast] at @s run stopsound @s music.game.game02
 execute as @a[tag=blast] at @s run stopsound @s music.game.game03
@@ -183,3 +188,11 @@ execute as @a[tag=blast] at @s run stopsound @s music.game.realm.blackhole
 execute as @a[tag=blast] at @s run stopsound @s music.game.realm.subspace
 execute as @a[tag=blast] at @s run stopsound @s music.game.event.tacos
 execute as @a[tag=blast] at @s run stopsound @s sfx.events.homedesign
+# = no vanilla music =
+stopsound @a music.game
+stopsound @a music.game.creative
+stopsound @a music.game.water
+stopsound @a music.game.nether
+stopsound @a music.game.nether_wastes
+stopsound @a music.game.end
+stopsound @a music.game.endboss
