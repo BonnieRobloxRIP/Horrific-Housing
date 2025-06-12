@@ -33,9 +33,13 @@ world.beforeEvents.playerInteractWithBlock.subscribe((data) => {
 system.runInterval(() => {
     world.getAllPlayers().forEach(player => {
         if (player) {
-            let block = "null"
-            try { block = world.getDimension("overworld").getBlock(player.location) } catch { }
-            if (block.typeId === "brr:landmine") {
+            let block = null; // Initializes as null, not the string "null"
+            try {
+                block = world.getDimension("overworld").getBlock(player.location);
+            } catch (e) {
+            }
+
+            if (block && block.typeId === "brr:landmine") {
                 world.getDimension("overworld").createExplosion(block.location, 10, { allowUnderwater: true, breaksBlocks: false });
                 world.getDimension("overworld").playSound("block.landmine", block.location);
                 world.getDimension("overworld").setBlockType(block.location, "minecraft:air");
