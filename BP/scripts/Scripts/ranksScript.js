@@ -255,45 +255,82 @@ export function sendRankedMessage(player, rawMessage) {
         const text = `§r${rankPrefix}§r${player.name}: §f${message}`;
         world.sendMessage({ rawtext: [{ text: text }] });
     }
+}
 
-    export const ranksScript = {
-        Code: {
-            execute() {
-                // Chat tag and emoji thing
-                world.beforeEvents.chatSend.subscribe((data) => {
-                    const player = data.sender;
+export const ranksScript = {
+    Code: {
+        execute() {
+            // Chat tag and emoji thing
+            world.beforeEvents.chatSend.subscribe((data) => {
+                const player = data.sender;
+                const tags = player.getTags();
+                let message = data.message;
+                let rankPrefix = "";
+
+                if (message.toLowerCase() === "!emojis") {
+                    data.cancel = true;
+                    player.sendMessage("§eExit the chat window to see the emoji list!");
+                    system.runTimeout(() => showEmojiMenu(player), 60);
+                    return;
+                }
+                if (message === "!stats") {
+                    data.cancel = true;
+                    player.sendMessage("§eExit the chat window to see the stats menu!");
+                    system.runTimeout(() => showStatsMenu(player), 60);
+                    return;
+                }
+
+                for (const emoji of emojis) {
+                    message = message.replaceAll(emoji.id, emoji.emoji);
+                }
+
+                // Dev ranks (chat)
+                if (player.name === "BonnieRobloxRIP") rankPrefix += " ";
+                if (player.name === "Marshmallow997") rankPrefix += " ";
+
+                if (["BonnieRobloxRIP", "Marshmallow997"].includes(player.name)) {
+                    rankPrefix += "[§l§dDev§r] ";
+
+                    // Tags (chat)
+                    if (tags.includes("tag_og")) rankPrefix += "[ §l§2OG§r] ";
+                    if (tags.includes("tag_lover")) rankPrefix += "[ §l§dLover§r] ";
+                    if (tags.includes("tag_winner")) rankPrefix += "[§l§bWinner§r] ";
+                    if (tags.includes("tag_bunny")) rankPrefix += "[§fBunny§r] ";
+                    if (tags.includes("tag_cat")) rankPrefix += "[§fCat§r] ";
+
+                    if (tags.includes("game")) {
+                        rankPrefix += "[§l§aGamer§r] ";
+                    } else {
+                        rankPrefix += "[§l§bLobby§r] ";
+                    }
+
+                    const text = `§r${rankPrefix}§r${player.name}: §f${message}`;
+                    world.sendMessage({ rawtext: [{ text: text }] });
+                    data.cancel = true;
+                }
+            });
+
+            // Nametag updater thing
+            system.runInterval(() => {
+                for (let player of world.getPlayers()) {
                     const tags = player.getTags();
-                    let message = data.message;
                     let rankPrefix = "";
 
-                    if (message.toLowerCase() === "!emojis") {
-                        data.cancel = true;
-                        player.sendMessage("§eExit the chat window to see the emoji list!");
-                        system.runTimeout(() => showEmojiMenu(player), 60);
-                        return;
-                    }
-                    if (message === "!stats") {
-                        data.cancel = true;
-                        player.sendMessage("§eExit the chat window to see the stats menu!");
-                        system.runTimeout(() => showStatsMenu(player), 60);
-                        return;
-                    }
-
-                    for (const emoji of emojis) {
-                        message = message.replaceAll(emoji.id, emoji.emoji);
-                    }
-
-                    // Dev ranks (chat)
                     if (player.name === "BonnieRobloxRIP") rankPrefix += " ";
                     if (player.name === "Marshmallow997") rankPrefix += " ";
 
+                    const playerNames = world.getPlayers().map(p => p.name);
+                    const bothDevsOnline = playerNames.includes("BonnieRobloxRIP") && playerNames.includes("Marshmallow997");
+
                     if (["BonnieRobloxRIP", "Marshmallow997"].includes(player.name)) {
+                        if (bothDevsOnline) {
+                            rankPrefix += " ";
+                        }
                         rankPrefix += "[§l§dDev§r] ";
 
-                        // Tags (chat)
-                        if (tags.includes("tag_og")) rankPrefix += "[ §l§2OG§r] ";
-                        if (tags.includes("tag_lover")) rankPrefix += "[ §l§dLover§r] ";
-                        if (tags.includes("tag_winner")) rankPrefix += "[§l§bWinner§r] ";
+                        if (tags.includes("tag_og")) rankPrefix += "[§2§lOG§r] ";
+                        if (tags.includes("tag_lover")) rankPrefix += "[§r] ";
+                        if (tags.includes("tag_winner")) rankPrefix += "[§b§lWinner§r] ";
                         if (tags.includes("tag_bunny")) rankPrefix += "[§fBunny§r] ";
                         if (tags.includes("tag_cat")) rankPrefix += "[§fCat§r] ";
 
@@ -303,46 +340,10 @@ export function sendRankedMessage(player, rawMessage) {
                             rankPrefix += "[§l§bLobby§r] ";
                         }
 
-                        const text = `§r${rankPrefix}§r${player.name}: §f${message}`;
-                        world.sendMessage({ rawtext: [{ text: text }] });
-                        data.cancel = true;
-                    };
-
-                    // Nametag updater thing
-                    system.runInterval(() => {
-                        for (let player of world.getPlayers()) {
-                            const tags = player.getTags();
-                            let rankPrefix = "";
-
-                            if (player.name === "BonnieRobloxRIP") rankPrefix += " ";
-                            if (player.name === "Marshmallow997") rankPrefix += " ";
-
-                            const playerNames = world.getPlayers().map(p => p.name);
-                            const bothDevsOnline = playerNames.includes("BonnieRobloxRIP") && playerNames.includes("Marshmallow997");
-                            if (["BonnieRobloxRIP", "Marshmallow997"].includes(player.name)) {
-                                if (bothDevsOnline) {
-                                    rankPrefix += " ";
-                                }
-                                rankPrefix += "[§l§dDev§r] ";
-
-                                if (tags.includes("tag_og")) rankPrefix += "[§2§lOG§r] ";
-                                if (tags.includes("tag_lover")) rankPrefix += "[§r] ";
-                                if (tags.includes("tag_winner")) rankPrefix += "[§b§lWinner§r] ";
-                                if (tags.includes("tag_bunny")) rankPrefix += "[§fBunny§r] ";
-                                if (tags.includes("tag_cat")) rankPrefix += "[§fCat§r] ";
-
-                                if (tags.includes("game")) {
-                                    rankPrefix += "[§l§aGamer§r] ";
-                                } else {
-                                    rankPrefix += "[§l§bLobby§r] ";
-                                }
-
-                                player.nameTag = `${rankPrefix}${player.name}`;
-                            }
-                        };
-                    })
-                })
-            }
+                        player.nameTag = `${rankPrefix}${player.name}`;
+                    }
+                }
+            });
         }
     }
-}
+};
