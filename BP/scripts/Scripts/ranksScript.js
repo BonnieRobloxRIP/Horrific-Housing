@@ -238,7 +238,9 @@ export function sendRankedMessage(player, rawMessage) {
 
     if (["BonnieRobloxRIP", "Marshmallow997"].includes(player.name)) {
         rankPrefix += "[§l§dDev§r] ";
+    }
 
+    {
         // Tags
         if (tags.includes("tag_og")) rankPrefix += "[ §l§2OG§r] ";
         if (tags.includes("tag_lover")) rankPrefix += "[ §l§dLover§r] ";
@@ -290,8 +292,10 @@ export const ranksScript = {
 
                 if (["BonnieRobloxRIP", "Marshmallow997"].includes(player.name)) {
                     rankPrefix += "[§l§dDev§r] ";
+                }
 
-                    // Tags (chat)
+                // Tags (chat)
+                {
                     if (tags.includes("tag_og")) rankPrefix += "[ §l§2OG§r] ";
                     if (tags.includes("tag_lover")) rankPrefix += "[ §l§dLover§r] ";
                     if (tags.includes("tag_winner")) rankPrefix += "[§l§bWinner§r] ";
@@ -327,8 +331,10 @@ export const ranksScript = {
                             rankPrefix += " ";
                         }
                         rankPrefix += "[§l§dDev§r] ";
+                    }
 
-                        if (tags.includes("tag_og")) rankPrefix += "[§2§lOG§r] ";
+                    {
+                        if (tags.includes("tag_og")) rankPrefix += "[ §2§lOG§r] ";
                         if (tags.includes("tag_lover")) rankPrefix += "[§r] ";
                         if (tags.includes("tag_winner")) rankPrefix += "[§b§lWinner§r] ";
                         if (tags.includes("tag_bunny")) rankPrefix += "[§fBunny§r] ";
@@ -343,7 +349,7 @@ export const ranksScript = {
                         player.nameTag = `${rankPrefix}${player.name}`;
                     }
                 }
-            });
+            })
         }
     }
-};
+}
