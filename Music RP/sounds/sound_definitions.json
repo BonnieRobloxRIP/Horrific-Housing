@@ -156,6 +156,17 @@
 					"volume": 1
 				}
 			]
+		},
+		"music.lobby.conclusion05": {
+			"category": "music",
+			"sounds": [
+				{
+					"load_on_low_memory": false,
+					"name": "sounds/music/lobby/conclusion_lobby05",
+					"stream": true,
+					"volume": 1
+				}
+			]
 		}, // - game -
 		"music.game.game": {
 			"category": "music",
@@ -207,6 +218,17 @@
 				{
 					"load_on_low_memory": false,
 					"name": "sounds/music/game/game05",
+					"stream": true,
+					"volume": 1
+				}
+			]
+		},
+		"music.game.game06": {
+			"category": "music",
+			"sounds": [
+				{
+					"load_on_low_memory": false,
+					"name": "sounds/music/game/game06",
 					"stream": true,
 					"volume": 1
 				}
@@ -979,6 +1001,28 @@
 				{
 					"load_on_low_memory": true,
 					"name": "sounds/block/fan_hum",
+					"stream": true,
+					"volume": 1
+				}
+			]
+		}, // = EMOTES =
+		"emote.shigure_dance.intro": {
+			"category": "block",
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/emotes/1_800_intro",
+					"stream": true,
+					"volume": 1
+				}
+			]
+		},
+		"emote.shigure_dance.loop": {
+			"category": "block",
+			"sounds": [
+				{
+					"load_on_low_memory": true,
+					"name": "sounds/emotes/1_800_loop",
 					"stream": true,
 					"volume": 1
 				}
